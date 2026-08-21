@@ -39,12 +39,12 @@ function renderSongs(songs) {
         <summary>
           <div class="summary-header">
             <div class="row-1">
-              <span class="order-badge">序 ${song.order}</span>
+              <span class="order-badge"># ${song.order}</span>
               <span class="song-title">${song.title}</span>
             </div>
             <div class="row-2">
-              <span>📅 最新直播: ${song.latestStreamDate}</span>
-              <span>🎤 唱過 ${song.singCount} 次</span>
+              <span> 最新直播: ${song.latestStreamDate}</span>
+              <span> 唱過 ${song.singCount} 次</span>
             </div>
           </div>
           <span class="expand-icon">▼</span>
@@ -54,11 +54,11 @@ function renderSongs(songs) {
           <div class="details-info">
             <p><strong>原唱：</strong> ${song.artist}</p>
             <p><strong>最新直播 VOD：</strong> 
-              <a href="${song.latestStreamUrl}" target="_blank" class="btn-link">${song.latestStreamTitle || '點我看當次直播'} 🔗</a>
+              <a href="${song.latestStreamUrl}" target="_blank" class="btn-link">${song.latestStreamTitle || '點我看當次直播'} </a>
             </p>
             <p><strong>カラオケ (伴奏)：</strong> 
               ${song.karaokeUrl 
-                ? `<a href="${song.karaokeUrl}" target="_blank" class="btn-link">${song.karaokeTitle || '點我看 YT 伴奏'} 🔗</a>` 
+                ? `<a href="${song.karaokeUrl}" target="_blank" class="btn-link">${song.karaokeTitle || '點我看 YT 伴奏'} </a>` 
                 : '<span style="color: #888;">(待補)</span>'}
             </p>
             <p><strong>備註：</strong> ${song.note || '無'}</p>
