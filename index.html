@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <!-- RWD 必備控制宣告 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的歌單</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <h1>MENU</h1>
+  </header>
+
+  <main class="container">
+    <!-- 控制控制列：搜尋與排序 -->
+    <section class="controls">
+      <input type="text" id="searchInput" placeholder="🔍 以歌名或原唱搜尋...">
+      
+      <div class="sort-group">
+        <label for="sortSelect">排序：</label>
+        <select id="sortSelect">
+          <option value="latestStreamDate-desc" selected>最新直播（新 ➔ 舊）</option>
+          <option value="latestStreamDate-asc">最新直播（舊 ➔ 新）</option>
+          <option value="singCount-desc">演唱次數（高 ➔ 低）</option>
+          <option value="singCount-asc">演唱次數（低 ➔ 高）</option>
+          <option value="order-asc">演唱序（小 ➔ 大）</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- 歌曲卡片容器 -->
+    <div id="songList" class="song-list"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

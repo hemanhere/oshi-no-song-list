@@ -1,0 +1,156 @@
+/* Base 設定 (Mobile First) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f4f4f6;
+  color: #333;
+  padding-bottom: 40px;
+}
+
+.top-bar {
+  background-color: #8b0000;
+  color: white;
+  padding: 1rem;
+}
+
+.container {
+  padding: 1rem;
+  max-width: 800px; /* 電腦版最大寬度限制 */
+  margin: 0 auto;
+}
+
+/* 控制區塊樣式 */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+#searchInput, #sortSelect {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* 展開式卡片核心樣式 */
+.song-card {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+/* 利用原生 <details> 與 <summary> */
+details summary {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  list-style: none; /* 隱藏原生箭頭 */
+  position: relative;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 第一層雙行配置 */
+.summary-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.row-1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.order-badge {
+  background-color: #eee;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.song-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.row-2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+  padding-right: 1.5rem; /* 留位置給箭頭 */
+}
+
+/* 自訂展開箭頭 */
+.expand-icon {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  font-size: 0.8rem;
+  color: #888;
+  transition: transform 0.2s ease;
+}
+
+details[open] .expand-icon {
+  transform: rotate(180deg);
+}
+
+/* 第二層展開內容 */
+.card-details {
+  padding: 0.8rem 1rem 1rem 1rem;
+  background-color: #fafafa;
+  border-top: 1px dashed #eee;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-link {
+  display: inline-block;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* 電腦版微調 (Desktop Adaptation) */
+@media (min-width: 600px) {
+  .controls {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #searchInput {
+    width: 60%;
+  }
+
+  .row-1 {
+    font-size: 1.2rem;
+  }
+}
