@@ -250,7 +250,7 @@ details[open] .expand-icon {
 .cover-title-link {
   grid-column: 3;
   grid-row: 1;
-  margin-left: -0.5rem; /* 向左拉近與縮圖的距離 */  
+  margin-left: -2rem; /* 向左拉近與縮圖的距離 */  
   font-weight: bold;
   color: #333;
   text-decoration: none;
