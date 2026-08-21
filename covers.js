@@ -50,7 +50,9 @@ function renderCovers(covers) {
             <a href="${cover.originalUrl}" target="_blank" class="btn-link">${cover.originalTitle || '點我看本家樣'} 🔗</a>
           </p>
           <p><strong>カラオケ (伴奏)：</strong> 
-            <a href="${cover.karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} 🔗</a>
+            ${cover.karaokeUrl 
+              ? `<a href="${cover.karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} 🔗</a>` 
+              : '<span style="color: #888;">(待補)</span>'}
           </p>
           <p><strong>備註：</strong> ${cover.note || '無'}</p>
         </div>
