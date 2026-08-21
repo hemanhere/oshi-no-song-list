@@ -57,7 +57,9 @@ function renderSongs(songs) {
               <a href="${song.latestStreamUrl}" target="_blank" class="btn-link">${song.latestStreamTitle || '點我看當次直播'} 🔗</a>
             </p>
             <p><strong>カラオケ (伴奏)：</strong> 
-              <a href="${song.karaokeUrl}" target="_blank" class="btn-link">${song.karaokeTitle || '點我看 YT 伴奏'} 🔗</a>
+              ${cover.karaokeUrl 
+                ? `<a href="${cover.karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} 🔗</a>` 
+                : '<span style="color: #888;">(待補)</span>'}
             </p>
             <p><strong>備註：</strong> ${song.note || '無'}</p>
           </div>
