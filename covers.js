@@ -34,7 +34,7 @@ function renderCovers(covers) {
           <img src="${getYouTubeThumbnail(cover.coverUrl)}" alt="縮圖" class="cover-thumb-first-layer">
         ` : ''}
         <a href="${cover.coverUrl}" target="_blank" class="cover-title-link" onclick="event.stopPropagation();">
-          ${cover.title} 🔗
+          ${cover.title} 
         </a>
         <span class="cover-date">發布日期：${cover.releaseDate}</span>
         <div class="details-hint">
@@ -45,11 +45,11 @@ function renderCovers(covers) {
       <div class="card-details">
         <div class="details-info">
           <p><strong>本家樣：</strong> 
-            <a href="${cover.originalUrl}" target="_blank" class="btn-link">${cover.originalTitle || '點我看本家樣'} 🔗</a>
+            <a href="${cover.originalUrl}" target="_blank" class="btn-link">${cover.originalTitle || '點我看本家樣'} </a>
           </p>
           <p><strong>カラオケ (伴奏)：</strong> 
             ${cover.karaokeUrl 
-              ? `<a href="${cover.karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} 🔗</a>` 
+              ? `<a href="${cover.karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} </a>` 
               : '<span style="color: #888;">(待補)</span>'}
           </p>
           <p><strong>備註：</strong> ${cover.note || '無'}</p>
