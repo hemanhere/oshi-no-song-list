@@ -7,7 +7,7 @@
     "latestStreamUrl": "https://youtube.com",
     "singCount": 5,
     "karaokeUrl": "https://youtube.com",
-    "note": "副歌高音需注意控制力道",
+    "note": " ",
     "order": 1
   },
   {
@@ -18,12 +18,12 @@
     "latestStreamUrl": "https://youtube.com",
     "singCount": 12,
     "karaokeUrl": "https://youtube.com",
-    "note": "節奏較快，注意呼吸點",
+    "note": " ",
     "order": 2
   },
   {
     "id": 3,
-    "title": "檸檬",
+    "title": "Lemon",
     "artist": "米津玄師",
     "latestStreamDate": "2026-07-01",
     "latestStreamUrl": "https://youtube.com",
