@@ -5,8 +5,10 @@
     "artist": "優里",
     "latestStreamDate": "2026-08-20",
     "latestStreamUrl": "https://www.youtube.com/watch?v=fQkIyPLa-q0",
+    "latestStreamTitle": "【歌枠】夏日清涼歌單！優里 - ドライフラワー",
     "singCount": 5,
     "karaokeUrl": "https://youtube.com",
+    "karaokeTitle": "【カラオケ】ドライフラワー / 優里 (Off Vocal)",
     "note": "",
     "order": 1
   },
@@ -16,8 +18,10 @@
     "artist": "YOASOBI",
     "latestStreamDate": "2026-08-15",
     "latestStreamUrl": "https://www.youtube.com/watch?v=fQkIyPLa-q0",
+    "latestStreamTitle": "【歌枠】熱門曲連唱！YOASOBI - アイドル",
     "singCount": 12,
     "karaokeUrl": "https://youtube.com",
+    "karaokeTitle": "【instrumental】YOASOBI - アイドル 伴奏",
     "note": "",
     "order": 2
   },
@@ -27,8 +31,10 @@
     "artist": "米津玄師",
     "latestStreamDate": "2026-07-01",
     "latestStreamUrl": "https://youtube.com",
+    "latestStreamTitle": "【歌枠】米津玄師專場 - Lemon",
     "singCount": 8,
     "karaokeUrl": "https://youtube.com",
+    "karaokeTitle": "Lemon / 米津玄師 (高音質 KARAOKE)",
     "note": "",
     "order": 3
   }
