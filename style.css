@@ -221,12 +221,16 @@ details[open] .expand-icon {
 /* 2. 翻唱歌曲第一層專屬樣式 (covers.html - 全新新增)  */
 /* ================================================== */
 .cover-summary {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  grid-template-rows: auto auto;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.2rem 0.8rem;
 }
 
 .cover-order {
+  grid-column: 1;
+  grid-row: 1;
   font-weight: bold;
   color: #8b0000;
   font-size: 1.1rem;
@@ -234,6 +238,8 @@ details[open] .expand-icon {
 }
 
 .cover-thumb-first-layer {
+  grid-column: 2;
+  grid-row: 1;
   width: 70px;
   height: 45px;
   object-fit: cover;
@@ -241,14 +247,9 @@ details[open] .expand-icon {
   flex-shrink: 0;
 }
 
-.cover-main-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
 .cover-title-link {
+  grid-column: 3;
+  grid-row: 1;  
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -260,11 +261,17 @@ details[open] .expand-icon {
 }
 
 .cover-date {
-  font-size: 0.8rem;
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 0.72rem;
   color: #666;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .details-hint {
+  grid-column: 4;
+  grid-row: 1;
   font-size: 0.85rem;
   color: #555;
   display: flex;

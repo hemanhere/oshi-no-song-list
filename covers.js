@@ -33,12 +33,10 @@ function renderCovers(covers) {
         ${getYouTubeThumbnail(cover.coverUrl) ? `
           <img src="${getYouTubeThumbnail(cover.coverUrl)}" alt="縮圖" class="cover-thumb-first-layer">
         ` : ''}
-        <div class="cover-main-info">
-          <a href="${cover.coverUrl}" target="_blank" class="cover-title-link" onclick="event.stopPropagation();">
-            ${cover.title} 🔗
-          </a>
-          <span class="cover-date">發布日期：${cover.releaseDate}</span>
-        </div>
+        <a href="${cover.coverUrl}" target="_blank" class="cover-title-link" onclick="event.stopPropagation();">
+          ${cover.title} 🔗
+        </a>
+        <span class="cover-date">發布日期：${cover.releaseDate}</span>
         <div class="details-hint">
           詳細資訊 <span class="triangle-icon">▼</span>
         </div>
