@@ -1,0 +1,35 @@
+[
+  {
+    "order": 1,
+    "title": "ドライフラワー (Cover)",
+    "coverUrl": "https://www.youtube.com/watch?v=EXAMPLE_COVER_1",
+    "releaseDate": "2026-05-20",
+    "originalTitle": "優里 - ドライフラワー",
+    "originalUrl": "https://www.youtube.com/watch?v=EXAMPLE_ORIGINAL_1",
+    "karaokeTitle": "【カラオケ】ドライフラワー / 優里",
+    "karaokeUrl": "https://www.youtube.com/watch?v=EXAMPLE_KARAOKE_1",
+    "note": "首支突破 10 萬觀看的翻唱作品"
+  },
+  {
+    "order": 2,
+    "title": "アイドル (Cover)",
+    "coverUrl": "https://www.youtube.com/watch?v=EXAMPLE_COVER_2",
+    "releaseDate": "2026-06-15",
+    "originalTitle": "YOASOBI - アイドル",
+    "originalUrl": "https://www.youtube.com/watch?v=EXAMPLE_ORIGINAL_2",
+    "karaokeTitle": "YOASOBI - アイドル 伴奏",
+    "karaokeUrl": "https://www.youtube.com/watch?v=EXAMPLE_KARAOKE_2",
+    "note": "混音重新處理版"
+  },
+  {
+    "order": 3,
+    "title": "Lemon (Cover)",
+    "coverUrl": "https://www.youtube.com/watch?v=EXAMPLE_COVER_3",
+    "releaseDate": "2026-07-01",
+    "originalTitle": "米津玄師 - Lemon",
+    "originalUrl": "https://www.youtube.com/watch?v=EXAMPLE_ORIGINAL_3",
+    "karaokeTitle": "Lemon / 米津玄師 (高音質 KARAOKE)",
+    "karaokeUrl": "https://www.youtube.com/watch?v=EXAMPLE_KARAOKE_3",
+    "note": ""
+  }
+]

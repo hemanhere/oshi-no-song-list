@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花咲くれは 翻唱歌曲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 頁首頂部列 -->
+  <header class="top-bar">
+    <div class="container menu-container">
+      <h1>花咲くれは 翻唱歌曲</h1>
+      <button id="menuToggleBtn" class="menu-btn">☰ MENU</button>
+      <nav id="menuNav" class="menu-dropdown hidden">
+        <a href="index.html" class="active">🎵 歌單列表 </a>
+        <a href="covers.html">🎙️ 翻唱歌曲 </a>
+        <a href="#" onclick="alert('數據分析頁面開發中！'); return false;">📊 數據分析 </a>
+        <a href="#" onclick="alert('關於頁面開發中！'); return false;">ℹ️ 關於 </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 控制列：搜尋與排序 -->
+    <section class="controls">
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="🔍 以歌名或本家樣搜尋...">
+        <button id="clearSearchBtn" class="clear-btn hidden" aria-label="清除搜尋">✕</button>
+      </div>
+      
+      <div class="sort-group">
+        <label for="sortSelect">排序：</label>
+        <select id="sortSelect">
+          <option value="order-asc" selected>翻唱序（小 ➔ 大）</option>
+          <option value="order-desc">翻唱序（大 ➔ 小）</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- 翻唱歌曲卡片容器 -->
+    <div id="coverList" class="song-list"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Heman / 網站非官方整理</p>
+  </footer>
+
+  <script src="covers.js"></script>
+</body>
+</html>
