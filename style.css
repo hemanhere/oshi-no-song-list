@@ -1,4 +1,6 @@
-/* Base 設定 (Mobile First) */
+/* ================================================== */
+/* 全站共用基礎設定 (Base & Mobile First)               */
+/* ================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +28,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;          /* 標題與按鈕之間的最小安全間距 */
-  padding: 0 0.5rem;  /* 左右各留 1.5rem 空間（可依喜好改 1rem ~ 2rem） */
+  padding: 0 0.5rem;  /* 左右各留 0.5rem 空間 */
 }
 
 /* 標題 RWD 自適應防換行設定 */
@@ -69,6 +71,12 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+.menu-dropdown a.active {
+  font-weight: bold;
+  background-color: #f9f9f9;
+  color: #8b0000;
+}
+
 /* 通用容器 */
 .container {
   padding: 1rem;
@@ -76,7 +84,9 @@ body {
   margin: 0 auto;
 }
 
-/* 控制區塊樣式 (搜尋與排序) */
+/* ================================================== */
+/* 控制區塊樣式 (搜尋與排序)                          */
+/* ================================================== */
 .controls {
   display: flex;
   flex-direction: column;
@@ -133,7 +143,9 @@ body {
   flex: 1;             /* 自動佔滿剩餘寬度 */
 }
 
-/* 展開式卡片核心樣式 */
+/* ================================================== */
+/* 通用展開式卡片核心樣式                              */
+/* ================================================== */
 .song-card {
   background: white;
   border-radius: 8px;
@@ -155,7 +167,9 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-/* 第一層雙行配置 */
+/* ================================================== */
+/* 1. 原歌單列表第一層專屬樣式 (index.html)            */
+/* ================================================== */
 .summary-header {
   display: flex;
   flex-direction: column;
@@ -203,7 +217,75 @@ details[open] .expand-icon {
   transform: rotate(180deg);
 }
 
-/* 第二層展開內容 */
+/* ================================================== */
+/* 2. 翻唱歌曲第一層專屬樣式 (covers.html - 全新新增)  */
+/* ================================================== */
+.cover-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cover-order {
+  font-weight: bold;
+  color: #8b0000;
+  font-size: 1.1rem;
+  min-width: 1.8rem;
+}
+
+.cover-thumb-first-layer {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.cover-main-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cover-title-link {
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.cover-title-link:hover {
+  color: #8b0000;
+  text-decoration: underline;
+}
+
+.cover-date {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.details-hint {
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.triangle-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.75rem;
+}
+
+details[open] .triangle-icon {
+  transform: rotate(180deg);
+}
+
+/* ================================================== */
+/* 3. 卡片第二層展開內容與通用元件                      */
+/* ================================================== */
 .card-details {
   padding: 0.8rem 1rem 1rem 1rem;
   background-color: #fafafa;
@@ -237,7 +319,15 @@ details[open] .expand-icon {
   text-decoration: underline;
 }
 
-/* 電腦版微調 (Desktop Adaptation) */
+.no-result {
+  text-align: center;
+  color: #888;
+  padding: 2rem 0;
+}
+
+/* ================================================== */
+/* RWD 電腦版微調 (Desktop Adaptation)                 */
+/* ================================================== */
 @media (min-width: 600px) {
   .controls {
     flex-direction: row;
@@ -269,7 +359,9 @@ details[open] .expand-icon {
   }
 }
 
-/* 頁尾版權宣告 */
+/* ================================================== */
+/* 頁尾版權宣告                                       */
+/* ================================================== */
 .site-footer {
   text-align: center;
   padding: 1.5rem;
