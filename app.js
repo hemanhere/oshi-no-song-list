@@ -54,10 +54,10 @@ function renderSongs(songs) {
           <div class="details-info">
             <p><strong>原唱：</strong> ${song.artist}</p>
             <p><strong>最新直播 VOD：</strong> 
-              <a href="${song.latestStreamUrl}" target="_blank" class="btn-link">點我看當次直播 🔗</a>
+              <a href="${song.latestStreamUrl}" target="_blank" class="btn-link">${song.latestStreamTitle || '點我看當次直播'} 🔗</a>
             </p>
             <p><strong>カラオケ (伴奏)：</strong> 
-              <a href="${song.karaokeUrl}" target="_blank" class="btn-link">點我看 YT 伴奏 🔗</a>
+              <a href="${song.karaokeUrl}" target="_blank" class="btn-link">${song.karaokeTitle || '點我看 YT 伴奏'} 🔗</a>
             </p>
             <p><strong>備註：</strong> ${song.note || '無'}</p>
           </div>
