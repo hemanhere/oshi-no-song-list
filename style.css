@@ -25,10 +25,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;          /* 標題與按鈕之間的最小安全間距 */
   padding: 0 0.5rem;  /* 左右各留 1.5rem 空間（可依喜好改 1rem ~ 2rem） */
 }
 
+/* 標題 RWD 自適應防換行設定 */
+.menu-container h1 {
+  /* 關鍵 1：動態縮放字級（最小 1.1rem / 依螢幕寬度 4.5vw 變化 / 最大 1.4rem） */
+  font-size: clamp(1.1rem, 4.5vw, 1.4rem); 
+  white-space: nowrap;    /* 關鍵 2：強制絕對不換行 */
+  overflow: hidden;       /* 關鍵 3：超出範圍隱藏 */
+  text-overflow: ellipsis;/* 關鍵 4：極端狀況下尾端顯示 ... 安全網 */
+}
+
 .menu-btn {
+  flex-shrink: 0;         /* 關鍵 5：確保按鈕寬度被保護，絕不被標題推擠變形 */
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.6);
   color: white;
@@ -41,7 +52,7 @@ body {
 .menu-dropdown {
   position: absolute;
   top: 100%;
-  right: 1rem;
+  right: 0.5rem;
   background: white;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
