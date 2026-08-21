@@ -251,6 +251,8 @@ details[open] .expand-icon {
   grid-column: 3;
   grid-row: 1;
   margin-left: -3rem; /* 向左拉近與縮圖的距離 */  
+  justify-self: start;
+  padding-right: 1.5rem; /* 關鍵：向右額外延伸 1.5rem (約 24px) 的點擊範圍 */
   font-weight: bold;
   color: #333;
   text-decoration: none;
