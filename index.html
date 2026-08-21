@@ -4,19 +4,30 @@
   <meta charset="UTF-8">
   <!-- RWD 必備控制宣告 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的歌單</title>
+  <title>花咲くれは 歌單整理</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="top-bar">
-    <h1>MENU</h1>
+     <div class="menu-container">
+     <h1>歌單系統</h1>
+     <button id="menuToggleBtn" class="menu-btn">☰ MENU</button>
+     <nav id="menuNav" class="menu-dropdown hidden">
+       <a href="#" class="active">🎵 歌單列表 (Songs)</a>
+       <a href="#" onclick="alert('數據分析頁面開發中！'); return false;">📊 數據分析 (Analysis - 測試)</a>
+       <a href="#" onclick="alert('關於頁面開發中！'); return false;">ℹ️ 關於 (About - 測試)</a>
+     </nav>
+   </div>
   </header>
 
   <main class="container">
     <!-- 控制控制列：搜尋與排序 -->
     <section class="controls">
-      <input type="text" id="searchInput" placeholder="🔍 以歌名或原唱搜尋...">
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="🔍 以歌名或原唱搜尋...">
+        <button id="clearSearchBtn" class="clear-btn hidden" aria-label="清除搜尋">✕</button>
+      </div>
       
       <div class="sort-group">
         <label for="sortSelect">排序：</label>
@@ -26,6 +37,7 @@
           <option value="singCount-desc">演唱次數（高 ➔ 低）</option>
           <option value="singCount-asc">演唱次數（低 ➔ 高）</option>
           <option value="order-asc">演唱序（小 ➔ 大）</option>
+          <option value="order-desc">演唱序（大 ➔ 小）</option>
         </select>
       </div>
     </section>
@@ -33,7 +45,9 @@
     <!-- 歌曲卡片容器 -->
     <div id="songList" class="song-list"></div>
   </main>
-
+  <footer class="site-footer">
+    <p>© 2026 Heman / 網站非官方整理 </p>
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>
