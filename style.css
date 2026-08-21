@@ -16,7 +16,14 @@ body {
 .top-bar {
   background-color: #8b0000;
   color: white;
-  padding: 0.5rem 0; /* 左右邊距由內層 container 統一控制，確保與下方內容對齊 */
+  /*padding: 0.5rem 0; *//* 左右邊距由內層 container 統一控制，確保與下方內容對齊 */
+  /*position: relative;*/
+  padding: 0.8rem 0;
+  margin: 1rem auto 1.2rem auto; /* 上方留白 1rem，下方留白 1.2rem，水平置中 */
+  width: calc(100% - 2rem);     /* 左右兩側各留 1rem 空隙 */
+  max-width: 880px;             /* 保持與下方卡片相同的最大寬度 */
+  border-radius: 10px;          /* 四角加圓角 */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12); /* 加入淡淡陰影增加立體感 */
   position: relative;
 }
 
