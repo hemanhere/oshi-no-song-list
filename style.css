@@ -112,6 +112,15 @@ body {
   font-size: 0.9rem;
 }
 
+.sort-group label {
+  white-space: nowrap; /* 確保文字永遠不換行 */
+  flex-shrink: 0;      /* 防止被右側選單擠壓 */
+}
+
+.sort-group #sortSelect {
+  flex: 1;             /* 自動佔滿剩餘寬度 */
+}
+
 /* 展開式卡片核心樣式 */
 .song-card {
   background: white;
