@@ -31,7 +31,7 @@ function renderCovers(covers) {
       <summary class="cover-summary">
         <span class="cover-order">#${cover.order}</span>
         ${getYouTubeThumbnail(cover.coverUrl) ? `
-          <img src="${getYouTubeThumbnail(cover.coverUrl)}" alt="縮圖" class="cover-thumb-first-layer">
+          <img src="${getYouTubeThumbnail(cover.coverUrl)}" alt="縮圖" class="cover-thumb-first-layer" loading="lazy">
         ` : ''}
         <a href="${cover.coverUrl}" target="_blank" class="cover-title-link" onclick="event.stopPropagation();">
           ${cover.title} 
