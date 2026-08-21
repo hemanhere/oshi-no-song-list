@@ -64,7 +64,7 @@ function renderSongs(songs) {
           ${getYouTubeThumbnail(song.latestStreamUrl) ? `
           <div class="details-preview">
             <a href="${song.latestStreamUrl}" target="_blank" title="點擊前往直播">
-              <img src="${getYouTubeThumbnail(song.latestStreamUrl)}" alt="直播預覽圖" class="stream-thumb">
+              <img src="${getYouTubeThumbnail(song.latestStreamUrl)}" alt="直播預覽圖" class="stream-thumb" loading="lazy">
             </a>
           </div>` : ''}
         </div>
