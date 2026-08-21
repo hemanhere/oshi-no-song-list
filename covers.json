@@ -8,7 +8,7 @@
     "originalUrl": "https://youtu.be/aHNWL7MBXoc?si=88Dm5bqErv7IU5Nq",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ illust：クロラ（𝕏 /chlora17）<br>■ mix：Oggi（𝕏 /oggi_mix）"
+    "note": "<br>■ Illust：クロラ（𝕏 /chlora17）<br>■ Mix：Oggi（𝕏 /oggi_mix）"
   },
   {
     "order": 2,
@@ -19,17 +19,83 @@
     "originalUrl": "https://youtu.be/K4xLi8IF1FM?si=a2f2HLLfXAGhXWeH",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ illust：若太郎（𝕏 /wakastawei）<br>■ mix：Oggi（𝕏 /oggi_mix）"
+    "note": "<br>■ Illust：若太郎（𝕏 /wakastawei）<br>■ Mix：Oggi（𝕏 /oggi_mix）"
   },
   {
     "order": 3,
-    "title": "Lemon (Cover)",
-    "coverUrl": "https://www.youtube.com/watch?v=EXAMPLE_COVER_3",
-    "releaseDate": "2026-07-01",
-    "originalTitle": "米津玄師 - Lemon",
-    "originalUrl": "https://www.youtube.com/watch?v=EXAMPLE_ORIGINAL_3",
-    "karaokeTitle": "Lemon / 米津玄師 (高音質 KARAOKE)",
-    "karaokeUrl": "https://www.youtube.com/watch?v=EXAMPLE_KARAOKE_3",
-    "note": ""
+    "title": "人生は最高の暇つぶし（Cover）",
+    "coverUrl": "https://youtu.be/ksuH7jzWDGI?si=ZPY7J9xwxvG_HSdw",
+    "releaseDate": "2023-01-19",
+    "originalTitle": "人生は最高の暇つぶし／HoneyWorks feat.Hanon",
+    "originalUrl": "https://youtu.be/u0OvEzIYYPM?si=cARSTrIlKebv2uaO",
+    "karaokeTitle": "",
+    "karaokeUrl": "",
+    "note": "<br>■ Illust：瑞樹くりむ（𝕏 /773_cream）<br>■ Mix：Oggi（𝕏 /oggi_mix）<br>■ Movie：雪乃羽弥（𝕏 /yukinohaya1122）"
+  }
+  {
+    "order": 4,
+    "title": "会いたい/もさを。（Cover）",
+    "coverUrl": "https://youtu.be/kG0ugfxRvFg?si=zEmx5IGYgT6fwKrg",
+    "releaseDate": "2023-07-18",
+    "originalTitle": "Mosawo - Aitai [Official Video]",
+    "originalUrl": "https://youtu.be/Egy8RZKxC5k?si=SA95IcSbNRIlbA45",
+    "karaokeTitle": "",
+    "karaokeUrl": "",
+    "note": "<br>■ Illust：梨月（𝕏 /riz_miz）<br>■ Mix：Oggi（𝕏 /oggi_mix）<br>■ Movie：雪乃羽弥（𝕏 /yukinohaya1122）"
+  }
+  {
+    "order": 5,
+    "title": "ねえねえねえ。/ピノキオピー（Cover）",
+    "coverUrl": "https://youtu.be/RDveqe5w2qk?si=fzX3deLSzKY_Q8oa",
+    "releaseDate": "2024-05-24",
+    "originalTitle": "ピノキオピー - ねぇねぇねぇ。 feat. 鏡音リン・初音ミク / Nee Nee Nee.",
+    "originalUrl": "https://youtu.be/w8yweCungCE?si=PrPDttk8-RuDe_g5",
+    "karaokeTitle": "",
+    "karaokeUrl": "",
+    "note": "<br>■ Vocal：𝒲 /水縹そまる（𝕏 /somaruriro）<br>■ illust：こるこるの（𝕏 /korukoruno）<br>■ mix：Oggi（𝕏 /oggi_mix）<br>■ movie：らいり（𝕏 /_Rai28）"
+  }
+  {
+    "order": 6,
+    "title": "ぎゅっと/もさを。（Cover）",
+    "coverUrl": "https://youtu.be/lyV6qG-vaw4?si=i64U6aAtz1ZfWx-2",
+    "releaseDate": "2024-07-16",
+    "originalTitle": "Mosawo - Gyutto [Official Video]",
+    "originalUrl": "https://youtu.be/8RmZFUxos3E?si=xnroVKj4lGzVDnCV",
+    "karaokeTitle": "【カラオケ】ぎゅっと。/もさを。　女性キー(-3)",
+    "karaokeUrl": "https://youtu.be/CxsD6YIdE3A?si=6vmiQlX4fxlOe3fl",
+    "note": "<br>■ Illust：梨月（𝕏 /riz_miz）<br>■ Mix：Oggi（𝕏 /oggi_mix）<br>■ Movie：花咲くれは（𝕏 /_krhana）"
+  }
+  {
+    "order": 7,
+    "title": "君色に染まる/TOKOTOKO（Cover）",
+    "coverUrl": "https://youtu.be/uI1kECrVMYI?si=stZxaBRQeiYUunfT",
+    "releaseDate": "2025-01-16",
+    "originalTitle": "君色に染まる / kimiiro ni somaru - TOKOTOKO（西沢さんP） feat.GUMI",
+    "originalUrl": "https://youtu.be/dDK8fk17MqQ?si=NDxokjr2yvwLE8e5",
+    "karaokeTitle": "",
+    "karaokeUrl": "",
+    "note": "<br>■ Illust：天麗（𝕏 /tnri_0404）<br>■ Mix：Nisshi（𝕏 /nisshi1115）<br>■ Movie：てる（𝕏 /teru_0129）"
+  }
+  {
+    "order": 8,
+    "title": "もう恋なんてしない/槇原敬之（Cover）",
+    "coverUrl": "https://youtu.be/y3FmNkkT8aQ?si=wbt-YakLNYFROKZb",
+    "releaseDate": "2025-12-01",
+    "originalTitle": "【公式】槇原敬之「もう恋なんてしない」(MV)【5thシングル】 (1992年) Noriyuki Makihara/Mo Koinante Shinai",
+    "originalUrl": "https://youtu.be/naz0-szzYXk?si=UtaECx69xJIztOw5",
+    "karaokeTitle": "【ピアノ伴奏カラオケ】もう恋なんてしない / 槇原敬之【女性キー】",
+    "karaokeUrl": "https://youtu.be/U1qqwBP_25s?si=R_ST1ej3pqmz-L1t",
+    "note": "<br>■ Illust：oN（𝕏 /oN303m）<br>■ Mix：Nisshi（𝕏 /nisshi1115）<br>■ Movie：Ao（𝕏 /Ao_o77）"
+  }
+  {
+    "order": 9,
+    "title": "夏色えがおで1,2,Jump!（Cover）",
+    "coverUrl": "https://youtu.be/CjHDy16arFQ?si=cwfosH7Wwbrj8uic",
+    "releaseDate": "2026-07-19",
+    "originalTitle": "【MV Full】 µ's 3rdシングル「夏色えがおで1,2,Jump!」【スクスタリリース記念！】",
+    "originalUrl": "https://youtu.be/1j-u11dHWnI?si=xjXc12VKZWqTTBSU",
+    "karaokeTitle": "",
+    "karaokeUrl": "",
+    "note": "<br>■ Vocal1：𝒲 /水縹そまる（𝕏 /somaruriro）<br>■ Vocal2：𝒲 /流川莉蘿（𝕏 /riloruru）<br>■ Vocal3：𝒲 /UFO醬（𝕏 /mochiufo）<br>■ Illust：なないのり（𝕏 /nanainori15）<br>■ Mix：バロン（𝕏 /baron_mix）<br>■ Movie：LeeRi（𝕏 /elaina_leeri）"
   }
 ]
