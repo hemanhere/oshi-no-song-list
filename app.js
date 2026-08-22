@@ -81,11 +81,17 @@ function handleSortAndRender() {
   const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
   const [field, direction] = document.getElementById('sortSelect').value.split('-');
 
-  // 1. 關鍵字過濾 (歌名或原唱)
-  let filtered = songsData.filter(song => 
-    song.title.toLowerCase().includes(keyword) || 
-    song.artist.toLowerCase().includes(keyword)
-  );
+  // 1. 關鍵字過濾 (根據是否有 # 進行分流搜尋)
+  let filtered = songsData.filter(song => {
+    // 若關鍵字以 # 開頭，僅檢索備註欄位 (note)
+    if (keyword.startsWith('#')) {
+      return (song.note || '').toLowerCase().includes(keyword);
+    }
+
+    // 無 # 時，僅檢索歌名與原唱
+    return song.title.toLowerCase().includes(keyword) || 
+           song.artist.toLowerCase().includes(keyword);
+  });
 
   // 2. 資料排序
   filtered.sort((a, b) => {
