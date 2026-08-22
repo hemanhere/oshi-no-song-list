@@ -1,6 +1,78 @@
 [
   {
-    "id": 1,
+    "order": 1,
+    "title": "シル・ヴ・プレジデント",
+    "artist": "P丸様",
+    "latestStreamDate": "2022-07-16",
+    "latestStreamUrl": "https://www.youtube.com/live/2Lkm1vW7B0Q?si=_Ab6e1CjENCNHlTT&t=128",
+    "latestStreamTitle": "【初配信】紅葉精靈人界覓食記ーー序章｜花咲くれは",
+    "singCount": 1,
+    "karaokeUrl": "https://www.youtube.com/live/l2l8bVcCqA8",
+    "karaokeTitle": "【カラオケ】シル・ヴ・プレジデント/P丸様。【off vocal】",
+    "note": ""
+  },
+  {
+    "order": 2,
+    "title": "ファンサ",
+    "artist": "mona（CV：夏川椎菜）",
+    "latestStreamDate": "2022-07-16",
+    "latestStreamUrl": "https://www.youtube.com/live/2Lkm1vW7B0Q?si=EgGr9BSlm8Qp_bBi&t=2582",
+    "latestStreamTitle": "【初配信】紅葉精靈人界覓食記ーー序章｜花咲くれは",
+    "singCount": 1,
+    "karaokeUrl": "https://www.youtube.com/live/Y6NclTEctRw",
+    "karaokeTitle": "【カラオケ】ファンサ / mona(CV:夏川椎菜)",
+    "note": "替え歌（食べ放題 ver.)"
+  },
+  {
+    "order": 3,
+    "title": "アイデンティティ",
+    "artist": "GUMI・初音ミク",
+    "latestStreamDate": "2022-07-16",
+    "latestStreamUrl": "https://www.youtube.com/live/2Lkm1vW7B0Q?si=9BIoP4yWQkxz1mpG&t=2995",
+    "latestStreamTitle": "【初配信】紅葉精靈人界覓食記ーー序章｜花咲くれは",
+    "singCount": 1,
+    "karaokeUrl": "",
+    "karaokeTitle": "",
+    "note": ""
+  },
+  {
+    "order": 4,
+    "title": "家後",
+    "artist": "江蕙",
+    "latestStreamDate": "2022-07-16",
+    "latestStreamUrl": "https://www.youtube.com/live/2Lkm1vW7B0Q?si=AykekmytI5FFKURf&t=3260",
+    "latestStreamTitle": "【初配信】紅葉精靈人界覓食記ーー序章｜花咲くれは",
+    "singCount": 1,
+    "karaokeUrl": "https://www.youtube.com/live/7PILJG2tDjg",
+    "karaokeTitle": "家後",
+    "note": ""
+  },
+  {
+    "order": 5,
+    "title": "C大調",
+    "artist": "張韶涵",
+    "latestStreamDate": "2022-07-16",
+    "latestStreamUrl": "https://www.youtube.com/live/2Lkm1vW7B0Q?si=Er-EpaZVSA5zIy2v&t=3614",
+    "latestStreamTitle": "【初配信】紅葉精靈人界覓食記ーー序章｜花咲くれは",
+    "singCount": 1,
+    "karaokeUrl": "https://www.youtube.com/live/iKKg4BKs2Eo",
+    "karaokeTitle": "張韶涵 C大調 歌詞 【去人聲 KTV 純音樂 伴奏版】",
+    "note": ""
+  },
+  {
+    "order": 6,
+    "title": "七彩的微風",
+    "artist": "梁世韻（Melody）",
+    "latestStreamDate": "2022-07-16",
+    "latestStreamUrl": "https://www.youtube.com/live/2Lkm1vW7B0Q?si=DtRXH1rgyEfNBinN&t=4710",
+    "latestStreamTitle": "【初配信】紅葉精靈人界覓食記ーー序章｜花咲くれは",
+    "singCount": 1,
+    "karaokeUrl": "https://www.youtube.com/live/QP1OkOFWWWQ",
+    "karaokeTitle": "珍珠美人魚 七彩的微風ktv無人聲(作業用)",
+    "note": ""
+  },
+  {
+    "order": 7,
     "title": "ドライフラワー",
     "artist": "優里",
     "latestStreamDate": "2022-07-18",
@@ -9,11 +81,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 1
+    "note": ""
   },
   {
-    "id": 2,
+    "order": 8,
     "title": "マリーゴールド",
     "artist": "あいみょん",
     "latestStreamDate": "2022-07-18",
@@ -22,11 +93,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 2
+    "note": ""
   },
   {
-    "id": 3,
+    "order": 9,
     "title": "ぎゅード",
     "artist": "もさを",
     "latestStreamDate": "2022-07-18",
@@ -35,11 +105,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 3
+    "note": ""
   },
   {
-    "id": 4,
+    "order": 10,
     "title": "群青",
     "artist": "YOASOBI",
     "latestStreamDate": "2022-07-18",
@@ -48,11 +117,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 4
+    "note": ""
   },
   {
-    "id": 5,
+    "order": 11,
     "title": "炎",
     "artist": "Lisa",
     "latestStreamDate": "2022-07-18",
@@ -61,11 +129,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 5
+    "note": ""
   },
   {
-    "id": 6,
+    "order": 12,
     "title": "追光者",
     "artist": "岑寧兒",
     "latestStreamDate": "2022-07-18",
@@ -74,11 +141,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 6
+    "note": ""
   },
   {
-    "id": 7,
+    "order": 13,
     "title": "うっせぇわ",
     "artist": "Ado",
     "latestStreamDate": "2022-07-18",
@@ -87,11 +153,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 7
+    "note": ""
   },
   {
-    "id": 8,
+    "order": 14,
     "title": "世界は恋に落ちている",
     "artist": "CHiCO",
     "latestStreamDate": "2022-07-18",
@@ -100,11 +165,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 8
+    "note": ""
   },
   {
-    "id": 9,
+    "order": 15,
     "title": "少女レイ",
     "artist": "みきとP",
     "latestStreamDate": "2022-07-18",
@@ -113,11 +177,10 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 9
+    "note": ""
   },
   {
-    "id": 10,
+    "order": 16,
     "title": "恋爱サーキュレーション",
     "artist": "花澤香菜",
     "latestStreamDate": "2022-07-18",
@@ -126,7 +189,6 @@
     "singCount": 1,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "",
-    "order": 10
+    "note": ""
   }
 ]
