@@ -89,8 +89,8 @@ function handleSortAndRender() {
     }
 
     // 無 # 時，僅檢索歌名與原唱
-    return song.title.toLowerCase().includes(keyword) || 
-           song.artist.toLowerCase().includes(keyword);
+    return String(song.title).toLowerCase().includes(keyword) || 
+           String(song.artist).toLowerCase().includes(keyword);
   });
 
   // 2. 資料排序
