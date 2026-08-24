@@ -96,7 +96,64 @@ body {
 
 .search-wrapper {
   position: relative;
-  width: 100%;
+  flex: 1; /* 關鍵：自動伸縮填滿剩餘空間，讓搜尋框自動縮短 */
+  min-width: 140px;
+}
+
+/* --- 綠色 Toggle Switch 開關樣式 --- */
+.embed-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+  flex-shrink: 0; /* 防止被擠壓 */
+}
+
+.embed-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 切換條底色 (預設 OFF 灰色) */
+.embed-toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .3s;
+  border-radius: 28px;
+}
+
+/* 開關裡面的圓形按鈕 */
+.embed-toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #4CAF50;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ON 狀態 (綠色底) */
+.embed-toggle-switch input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+/* ON 狀態時，圓紐右移 + 顯示勾勾 ✔ */
+.embed-toggle-switch input:checked + .slider:before {
+  transform: translateX(24px);
+  content: "✓"; /* 圖示上的勾勾 */
 }
 
 #searchInput, #sortSelect {
