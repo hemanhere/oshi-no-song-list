@@ -1,17 +1,31 @@
 let songsData = [];
 
-// 解析 YouTube Video ID
-function getYouTubeId(url) {
-  if (!url) return '';
-  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|live\/))([a-zA-Z0-9_-]{11})/);
-  return match ? match[1] : '';
+// 解析 YouTube Video ID 與時間秒數 (t=1m20s 或 t=80)
+function parseYouTubeUrl(url) {
+  if (!url) return { id: '', start: 0 };
+  const idMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/|live\/))([a-zA-Z0-9_-]{11})/);
+  const id = idMatch ? idMatch[1] : '';
+  
+  let start = 0;
+  const timeMatch = url.match(/[?&]t=([^&]+)/);
+  if (timeMatch) {
+    const timeStr = timeMatch[1];
+    if (/^\d+$/.test(timeStr)) {
+      start = parseInt(timeStr, 10);
+    } else {
+      const m = timeStr.match(/(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?/);
+      if (m) {
+        start = (parseInt(m[1]||0,10)*3600) + (parseInt(m[2]||0,10)*60) + parseInt(m[3]||0,10);
+      }
+    }
+  }
+  return { id, start };
 }
 
-// 根據 YouTube URL 取得封面圖片
-function getYouTubeThumbnail(url) {
-  const videoId = getYouTubeId(url);
-  return videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : '';
-}
++function getYouTubeThumbnail(url) {
++  const { id } = parseYouTubeUrl(url);
++  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '';
++}
 
 // 初始化：載入 JSON 資料
 async function fetchSongs() {
@@ -30,7 +44,6 @@ async function fetchSongs() {
 function renderSongs(songs) {
   const container = document.getElementById('songList');
   container.innerHTML = '';
-  const isEmbed = document.getElementById('embedPlayerToggle')?.checked || false;
 
   if (songs.length === 0) {
     container.innerHTML = '<p style="text-align:center; color:#888;">找不到符合條件的歌曲</p>';
@@ -41,7 +54,8 @@ function renderSongs(songs) {
     const card = document.createElement('div');
     card.className = 'song-card';
 
-    const videoId = getYouTubeId(song.latestStreamUrl);
+    card.dataset.streamUrl = song.latestStreamUrl || '';
+    card.dataset.title = song.title || '';
     
     card.innerHTML = `
       <details>
@@ -62,11 +76,7 @@ function renderSongs(songs) {
         <div class="card-details">
           <div class="details-info">
             <p><strong>原唱：</strong> ${song.artist}</p>
-            ${!isEmbed ? `
-              <p><strong>最新直播 VOD：</strong> 
-                <a href="${song.latestStreamUrl}" target="_blank" class="btn-link">${song.latestStreamTitle || '點我看當次直播'} </a>
-              </p>
-            ` : ''}
+            <p class="vod-link-p"></p>
             <p><strong>カラオケ (伴奏)：</strong> 
               ${song.karaokeUrl 
                 ? `<a href="${song.karaokeUrl}" target="_blank" class="btn-link">${song.karaokeTitle || '點我看 YT 伴奏'} </a>` 
@@ -74,28 +84,59 @@ function renderSongs(songs) {
             </p>
             <p><strong>備註：</strong> ${song.note || '無'}</p>
           </div>
-          ${videoId ? (isEmbed ? `
-            <div class="details-preview embed-container">
-              <iframe 
-                src="https://www.youtube.com/embed/${videoId}" 
-                title="${song.title}" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
-            </div>
-          ` : `
-            <div class="details-preview">
-              <a href="${song.latestStreamUrl}" target="_blank" title="點擊前往直播">
-                <img src="${getYouTubeThumbnail(song.latestStreamUrl)}" alt="直播預覽圖" class="stream-thumb" loading="lazy">
-              </a>
-            </div>
-          `) : ''}
+          <div class="details-preview"></div>
         </div>
       </details>
     `;
+    // 監聽手風琴展開/收合事件，實現獨占播放與動態加載
+    const detailsEl = card.querySelector('details');
+    detailsEl.addEventListener('toggle', () => {
+      if (detailsEl.open) {
+        // 自動關閉其他展開的卡片，實現「一次只看一支影片」
+        document.querySelectorAll('.song-card details[open]').forEach(other => {
+          if (other !== detailsEl) other.open = false;
+        });
+        updateCardMedia(card);
+      } else {
+        // 收合時直接清空，達到停掉影片的效果
+        const preview = card.querySelector('.details-preview');
+        if (preview) preview.innerHTML = '';
+      }
+    });
     container.appendChild(card);
+    updateCardMedia(card);
   });
+}
+
+// 根據 Toggle Switch 狀態切換單一卡片內容 (無須重繪整個 HTML)
+function updateCardMedia(card) {
+  const isEmbed = document.getElementById('embedPlayerToggle')?.checked || false;
+  const streamUrl = card.dataset.streamUrl;
+  const title = card.dataset.title;
+  const vodP = card.querySelector('.vod-link-p');
+  const preview = card.querySelector('.details-preview');
+  const detailsEl = card.querySelector('details');
+
+  if (vodP) {
+    vodP.style.display = isEmbed ? 'none' : 'block';
+    vodP.innerHTML = `<strong>最新直播 VOD：</strong> <a href="${streamUrl}" target="_blank" class="btn-link">點我看當次直播 </a>`;
+  }
+
+  if (!preview) return;
+
+  // 僅當卡片處於展開狀態時才加載 <iframe>
+  if (detailsEl && detailsEl.open) {
+    const { id, start } = parseYouTubeUrl(streamUrl);
+    if (id && isEmbed) {
+      preview.className = 'details-preview embed-container';
+      preview.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1${start ? `&start=${start}` : ''}" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    } else if (id) {
+      preview.className = 'details-preview';
+      preview.innerHTML = `<a href="${streamUrl}" target="_blank"><img src="${getYouTubeThumbnail(streamUrl)}" class="stream-thumb" loading="lazy"></a>`;
+    } else {
+      preview.innerHTML = '';
+    }
+  }
 }
 
 // 排序與搜尋邏輯
@@ -153,7 +194,8 @@ if (embedPlayerToggle) {
 
   embedPlayerToggle.addEventListener('change', (e) => {
     localStorage.setItem('useEmbedPlayer', e.target.checked);
-    handleSortAndRender();
+  // 切換開關時，僅更新卡片 DOM，保持原本的展開狀態
+    document.querySelectorAll('.song-card').forEach(updateCardMedia);    
   });
 }
 
