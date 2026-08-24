@@ -519,7 +519,7 @@ details[open] .triangle-icon {
   }
 
   .details-preview {
-    width: 200px;
+    width: 360px;
     flex-shrink: 0;
   }
 }
