@@ -254,10 +254,9 @@ body {
     transform: translateX(20px);
   }
   .sort-group {
-    margin-left: auto;
     gap: 0.2rem;
     flex: 1;
-    justify-content: flex-end;/
+    justify-content: flex-end;
   }
 
   /* 關鍵優化：手機版隱藏「排序：」標籤文字，直接看下拉選單內容更直覺 */
@@ -481,6 +480,7 @@ details[open] .triangle-icon {
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   display: block;
+  margin: 0 auto; /* 手機版：居中排列 */
 }
 
 .btn-link {
@@ -515,6 +515,11 @@ details[open] .triangle-icon {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .stream-thumb {
+    margin-left: auto;  /* 電腦版：自動將縮圖推至右側邊界 */
+    margin-right: 0;
   }
   
   .details-info {

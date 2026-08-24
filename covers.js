@@ -1,10 +1,15 @@
 let coversData = [];
+let currentlyOpenOrder = null;
 
-// 解析 YouTube Video ID 取得縮圖
-function getYouTubeThumbnail(url) {
+function getYouTubeId(url) {
   if (!url) return '';
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?.*v=|embed\/|v\/))([a-zA-Z0-9_-]{11})/);
-  return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : '';
+  return match ? match[1] : '';
+}
+
+function getYouTubeThumbnail(url) {
+  const id = getYouTubeId(url);
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '';
 }
 
 // 載入翻唱歌曲資料
@@ -18,16 +23,32 @@ async function fetchCovers() {
   }
 }
 
-// 渲染翻唱卡片列表
+// 2. 修改：渲染函數加入狀態維持與 iframe 動態生成
 function renderCovers(covers) {
   const container = document.getElementById('coverList');
+  const isEmbedEnabled = document.getElementById('embedToggle')?.checked || false;
+
   if (covers.length === 0) {
     container.innerHTML = '<p class="no-result">查無相關翻唱歌曲</p>';
     return;
   }
 
-  container.innerHTML = covers.map(cover => `
-    <details class="song-card">
+  container.innerHTML = covers.map(cover => {
+    const videoId = getYouTubeId(cover.coverUrl);
+    // 動態生成 iframe
+    const embedHtml = (isEmbedEnabled && videoId) ? `
+      <div class="details-preview">
+        <div class="embed-container">
+          <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    ` : '';
+
+    // 判斷是否為「記憶中展開」的卡片
+    const isOpen = (currentlyOpenOrder === cover.order.toString()) ? 'open' : '';
+
+    return `
+    <details class="song-card" data-order="${cover.order}" ${isOpen}>
       <summary class="cover-summary">
         <span class="cover-order">#${cover.order}</span>
         ${getYouTubeThumbnail(cover.coverUrl) ? `
@@ -54,9 +75,44 @@ function renderCovers(covers) {
           </p>
           <p><strong>備註：</strong> ${cover.note || '無'}</p>
         </div>
+        ${embedHtml}
       </div>
     </details>
-  `).join('');
+  `}).join('');
+
+  // 渲染完成後，重新綁定展開/關閉事件
+  bindDetailsEvents();
+}
+
+  // 3. 新增：綁定展開事件 (手風琴與停止播放邏輯)
+function bindDetailsEvents() {
+  const detailsList = document.querySelectorAll('.song-card');
+  detailsList.forEach(details => {
+    details.addEventListener('toggle', function() {
+      if (this.open) {
+        // 更新當前記憶的 order
+        currentlyOpenOrder = this.dataset.order;
+        // 關閉其他已展開的卡片
+        detailsList.forEach(other => {
+          if (other !== this && other.open) {
+            other.open = false; // 這裡會自動觸發 other 的 toggle 進入下方的 else
+          }
+        });
+      } else {
+        // 當卡片被關閉時，停止播放 (重置 iframe src)
+        const iframe = this.querySelector('iframe');
+        if (iframe) {
+          const currentSrc = iframe.src;
+          iframe.src = '';
+          iframe.src = currentSrc;
+        }
+        // 如果使用者手動關閉當前卡片，清空記憶
+        if (currentlyOpenOrder === this.dataset.order) {
+          currentlyOpenOrder = null;
+        }
+      }
+    });
+  });
 }
 
 // 處理排序與搜尋過濾
@@ -104,6 +160,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   sortSelect.addEventListener('change', handleSortAndRender);
+
+  // 4. 新增：監聽 Toggle 切換，觸發重繪 (會依照 currentlyOpenOrder 維持開關狀態)
+  const embedToggle = document.getElementById('embedToggle');
+  if (embedToggle) {
+    embedToggle.addEventListener('change', handleSortAndRender);
+  }
 
   // 初始化載入
   fetchCovers();
