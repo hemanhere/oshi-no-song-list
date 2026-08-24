@@ -35,20 +35,25 @@ function renderCovers(covers) {
 
   container.innerHTML = covers.map(cover => {
     const videoId = getYouTubeId(cover.coverUrl);
-    // 動態生成 iframe
+    const isOpen = (currentlyOpenOrder === cover.order.toString());
+    const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+
+    // 關鍵修改 1：將播放網址存於 data-src，僅在預設展開時填入 src
     const embedHtml = (isEmbedEnabled && videoId) ? `
       <div class="details-preview">
         <div class="embed-container">
-          <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen loading="lazy"></iframe>
+          <iframe 
+            data-src="${embedUrl}" 
+            src="${isOpen ? embedUrl : ''}" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
         </div>
       </div>
     ` : '';
 
-    // 判斷是否為「記憶中展開」的卡片
-    const isOpen = (currentlyOpenOrder === cover.order.toString()) ? 'open' : '';
-
     return `
-    <details class="song-card" data-order="${cover.order}" ${isOpen}>
+    <details class="song-card" data-order="${cover.order}" ${isOpen ? 'open' : ''}>
       <summary class="cover-summary">
         <span class="cover-order">#${cover.order}</span>
         ${getYouTubeThumbnail(cover.coverUrl) ? `
@@ -80,7 +85,6 @@ function renderCovers(covers) {
     </details>
   `}).join('');
 
-  // 渲染完成後，重新綁定展開/關閉事件
   bindDetailsEvents();
 }
 
@@ -89,24 +93,28 @@ function bindDetailsEvents() {
   const detailsList = document.querySelectorAll('.song-card');
   detailsList.forEach(details => {
     details.addEventListener('toggle', function() {
+      const iframe = this.querySelector('iframe');
+
       if (this.open) {
-        // 更新當前記憶的 order
         currentlyOpenOrder = this.dataset.order;
-        // 關閉其他已展開的卡片
+
+        // 關鍵修改 2：卡片於「可見狀態」展開時，才從 data-src 載入影片，確保元件初始化成功
+        if (iframe && iframe.dataset.src && iframe.src !== iframe.dataset.src) {
+          iframe.src = iframe.dataset.src;
+        }
+
+        // 手風琴效果：關閉其他卡片
         detailsList.forEach(other => {
           if (other !== this && other.open) {
-            other.open = false; // 這裡會自動觸發 other 的 toggle 進入下方的 else
+            other.open = false;
           }
         });
       } else {
-        // 當卡片被關閉時，停止播放 (重置 iframe src)
-        const iframe = this.querySelector('iframe');
+        // 關鍵修改 3：卡片關閉時直接清空 src，順暢停止播放且不破壞隱藏狀態下的渲染
         if (iframe) {
-          const currentSrc = iframe.src;
           iframe.src = '';
-          iframe.src = currentSrc;
         }
-        // 如果使用者手動關閉當前卡片，清空記憶
+
         if (currentlyOpenOrder === this.dataset.order) {
           currentlyOpenOrder = null;
         }
