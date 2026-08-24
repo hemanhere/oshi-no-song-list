@@ -229,17 +229,25 @@ body {
 
 /* 📱 手機版微調 (螢幕寬度 < 600px) */
 @media (max-width: 599px) {
+  .controls {
+    gap: 0.6rem 0.4rem;      /* 縮小控制區塊內部間距 */
+  }
   .search-wrapper {
     flex: 1 1 100%;     /* 手機版搜尋列獨占第一列 */
   }
-  
-  .embed-toggle-wrapper,
+  .embed-toggle-wrapper {
+    font-size: 0.85rem;     /* 稍微縮小開關文字大小 */
+  }
   .sort-group {
     font-size: 0.85rem; /* 小螢幕稍微縮小字級 */
+    margin-left: auto;      /* 讓排序自動靠右對齊，開關靠左 */
+    max-width: 58%;         /* 限制排序區塊最大寬度，確保不擠壓左側開關 */
   }
 
   .sort-group {
-    margin-left: auto;  /* 讓排序靠右對齊，開關靠左，形成好看的兩端對齊 */
+    padding: 0.4rem 0.3rem; /* 縮小選單內距，釋放橫向空間 */
+    font-size: 0.82rem;
+    width: 100%;
   }
 }
 
