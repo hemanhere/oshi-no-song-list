@@ -22,10 +22,10 @@ function parseYouTubeUrl(url) {
   return { id, start };
 }
 
-+function getYouTubeThumbnail(url) {
-+  const { id } = parseYouTubeUrl(url);
-+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '';
-+}
+function getYouTubeThumbnail(url) {
+  const { id } = parseYouTubeUrl(url);
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '';
+}
 
 // 初始化：載入 JSON 資料
 async function fetchSongs() {
