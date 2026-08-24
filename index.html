@@ -22,14 +22,6 @@
    </div>
   </header>
 
-  <div class="container player-mode-bar">
-    <label class="switch-label">
-      <input type="checkbox" id="embedPlayerToggle">
-      <span class="slider"></span>
-      <span class="mode-text">直接播放模式 (ON / OFF)</span>
-    </label>
-  </div>
-
   <main class="container">
     <!-- 控制控制列：搜尋與排序 -->
     <section class="controls">
@@ -37,6 +29,12 @@
         <input type="text" id="searchInput" placeholder="🔍 以歌名、原唱搜尋或#開頭搜尋備註...">
         <button id="clearSearchBtn" class="clear-btn hidden" aria-label="清除搜尋">✕</button>
       </div>
+ 
+      <!-- 內嵌播放器 Toggle Switch 開關 -->
+      <label class="embed-toggle-switch" title="內建播放模式">
+        <input type="checkbox" id="embedPlayerToggle">
+        <span class="slider"></span>
+      </label>
       
       <div class="sort-group">
         <label for="sortSelect">排序：</label>
