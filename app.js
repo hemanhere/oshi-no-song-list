@@ -127,14 +127,21 @@ function updateCardMedia(card) {
   // 僅當卡片處於展開狀態時才加載 <iframe>
   if (detailsEl && detailsEl.open) {
     const { id, start } = parseYouTubeUrl(streamUrl);
-    if (id && isEmbed) {
-      preview.className = 'details-preview embed-container';
-      preview.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}${start ? `?start=${start}` : ''}" title="${title}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-      preview.className = 'details-preview';
-      preview.innerHTML = `<a href="${streamUrl}" target="_blank"><img src="${getYouTubeThumbnail(streamUrl)}" class="stream-thumb" loading="lazy"></a>`;
+    if (id) {
+      if (isEmbed) {
+        // Toggle 開啟：顯示內嵌 iframe 播放器
+        preview.className = 'details-preview embed-container';
+        preview.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}${start ? `?start=${start}` : ''}" title="${title}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      } else {
+        // Toggle 關閉：顯示圖片縮圖
+        preview.className = 'details-preview';
+        preview.innerHTML = `<a href="${streamUrl}" target="_blank" title="點擊前往直播"><img src="${getYouTubeThumbnail(streamUrl)}" class="stream-thumb" loading="lazy"></a>`;
+      }
     } else {
       preview.innerHTML = '';
     }
+  } else {
+    preview.innerHTML = '';
   }
 }
 
