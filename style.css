@@ -89,7 +89,7 @@ body {
 /* ================================================== */
 .controls {
   display: flex;
-  flex-direction: column;
+  align-items: center; /* 關鍵：讓所有元件以中心點垂直對齊 */
   gap: 0.8rem;
   margin-bottom: 1.2rem;
 }
@@ -98,6 +98,21 @@ body {
   position: relative;
   flex: 1; /* 關鍵：自動伸縮填滿剩餘空間，讓搜尋框自動縮短 */
   min-width: 140px;
+}
+
+/* --- 開關與說明文字外層容器 --- */
+.embed-toggle-wrapper {
+  display: inline-flex;
+  align-items: center; /* 讓「內嵌播放：」文字與開關中心對齊 */
+  gap: 0.4rem;
+  cursor: pointer;
+  white-space: nowrap; /* 避免文字換行 */
+  flex-shrink: 0;      /* 防止開關被擠壓 */
+}
+
+.toggle-label-text {
+  font-size: 0.9rem;
+  color: #333;
 }
 
 /* --- 綠色 Toggle Switch 開關樣式 --- */
@@ -156,15 +171,12 @@ body {
   content: "✓"; /* 圖示上的勾勾 */
 }
 
-#searchInput, #sortSelect {
+#searchInput {
   padding: 0.6rem 0.8rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 0.95rem;
   width: 100%;
-}
-
-#searchInput {
   padding-right: 2rem;
 }
 
@@ -189,6 +201,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
+  flex-shrink: 0; /* 確保排序區塊不被擠壓 */
 }
 
 .sort-group label {
@@ -197,7 +210,10 @@ body {
 }
 
 .sort-group #sortSelect {
-  flex: 1;             /* 自動佔滿剩餘寬度 */
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
 }
 
 /* ================================================== */
