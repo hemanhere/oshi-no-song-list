@@ -457,10 +457,10 @@ details[open] .triangle-icon {
 /* 16:9 RWD 影片容器 (防止內嵌播放器右側被切邊) */
 .embed-container {
   position: relative;
+  width: 100%;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  width: 100%;
   border-radius: 6px;
   background-color: #000;
 }
@@ -509,9 +509,11 @@ details[open] .triangle-icon {
 
   /* 卡片第二層：電腦版轉為左右雙欄 */
   .card-details {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 1rem;
   }
   
   .details-info {
