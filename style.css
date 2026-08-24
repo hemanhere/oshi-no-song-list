@@ -144,8 +144,8 @@ body {
 .embed-toggle-switch {
   position: relative;
   display: inline-block;
-  width: 52px;
-  height: 28px;
+  width: 50px;
+  height: 26px;
   flex-shrink: 0; /* 防止被擠壓 */
 }
 
@@ -162,15 +162,15 @@ body {
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: #ccc;
   transition: .3s;
-  border-radius: 28px;
+  border-radius: 26px;
 }
 
 /* 開關裡面的圓形按鈕 */
 .embed-toggle-switch .slider:before {
   position: absolute;
   content: "";
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
   left: 3px;
   bottom: 3px;
   background-color: white;
@@ -179,7 +179,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 11px;
   color: #4CAF50;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -243,7 +243,7 @@ body {
   }
   
   .search-wrapper {
-    flex: 1;            /* 搜尋列自動伸縮調小，留空間給右側開關與選單 */
+    flex: 1 1 auto;            /* 搜尋列自動伸縮調小，留空間給右側開關與選單 */
   }
 }
 
