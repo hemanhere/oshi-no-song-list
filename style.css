@@ -97,8 +97,7 @@ body {
 
 .search-wrapper {
   position: relative;
-  flex: 1 1 200px;       /* 手機版自動佔滿，電腦版彈性收縮 */
-  min-width: 140px;
+  flex: 1 1 100px;       /* 手機版預設佔滿一整行 */
 }
 
 #searchInput {
@@ -107,6 +106,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 0.95rem;
+  box-sizing: border-box;
 }
 
 .clear-btn {
@@ -127,32 +127,35 @@ body {
 
 /* --- 開關與說明文字外層容器 --- */
 .embed-toggle-wrapper {
-  display: inline-flex;
+  display: flex;
   align-items: center; /* 讓「內嵌播放：」文字與開關中心對齊 */
   gap: 0.4rem;
   cursor: pointer;
-  white-space: nowrap; /* 避免文字換行 */
   flex-shrink: 0;      /* 防止開關被擠壓 */
 }
 
 .toggle-label-text {
   font-size: 0.9rem;
   color: #333;
+  white-space: nowrap;   /* 關鍵修復 1：直接強制文字絕對不換行 */
+  flex-shrink: 0;
 }
 
 /* --- 綠色 Toggle Switch 開關樣式 --- */
 .embed-toggle-switch {
   position: relative;
   display: inline-block;
-  width: 50px;
+  width: 48px;
   height: 26px;
   flex-shrink: 0; /* 防止被擠壓 */
 }
 
 .embed-toggle-switch input {
+  position: absolute;    /* 關鍵修復 2：拔除原生隱形 checkbox 佔用的體積 */
   opacity: 0;
   width: 0;
   height: 0;
+  margin: 0;
 }
 
 /* 切換條底色 (預設 OFF 灰色) */
@@ -192,7 +195,7 @@ body {
 
 /* ON 狀態時，圓紐右移 + 顯示勾勾 ✔ */
 .embed-toggle-switch input:checked + .slider:before {
-  transform: translateX(24px);
+  transform: translateX(22px);
   content: "✓"; /* 圖示上的勾勾 */
 }
 
@@ -202,6 +205,7 @@ body {
   gap: 0.4rem;
   font-size: 0.9rem;
   flex-shrink: 0; /* 確保排序區塊不被擠壓 */
+  margin-left: auto;     /* 手機版讓排序區塊自動往右推齊 */
 }
 
 .sort-group label {
@@ -214,6 +218,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 0.95rem;
+  width: auto;
+  min-width: 0;
 }
 
 /* ================================================== */
@@ -243,7 +249,10 @@ body {
   }
   
   .search-wrapper {
-    flex: 1 1 auto;            /* 搜尋列自動伸縮調小，留空間給右側開關與選單 */
+    flex: 1 1 auto;            /* 搜尋列自動伸縮調小，留空間給右側開關與選單 */ 
+  }
+  .sort-group {
+    margin-left: 0;        /* 電腦版取消靠右推齊，回歸自然間距 */
   }
 }
 
@@ -443,15 +452,6 @@ details[open] .triangle-icon {
 /* RWD 電腦版微調 (Desktop Adaptation)                 */
 /* ================================================== */
 @media (min-width: 600px) {
-  .controls {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .search-wrapper {
-    width: 60%;
-  }
-
   .row-1 {
     font-size: 1.2rem;
   }
