@@ -128,6 +128,7 @@ body {
 /* --- 開關與說明文字外層容器 --- */
 .embed-toggle-wrapper {
   display: flex;
+  flex-direction: row;   /* 關鍵 1：強制內部元素保持「水平」單列排列 */
   align-items: center; /* 讓「內嵌播放：」文字與開關中心對齊 */
   gap: 0.4rem;
   cursor: pointer;
