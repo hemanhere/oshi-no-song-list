@@ -129,12 +129,14 @@ function updateCardMedia(card) {
     const { id, start } = parseYouTubeUrl(streamUrl);
     if (id) {
       if (isEmbed) {
-        // Toggle 開啟：顯示內嵌 iframe 播放器
-        preview.className = 'details-preview embed-container';
-        preview.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}${start ? `?start=${start}` : ''}" title="${title}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        // Toggle 開啟：外層是控制寬度的 .details-preview，內層包覆 16:9 的 .embed-container
+        preview.innerHTML = `
+          <div class="embed-container">
+            <iframe src="https://www.youtube.com/embed/${id}${start ? `?start=${start}` : ''}" title="${title}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        `;
       } else {
         // Toggle 關閉：顯示圖片縮圖
-        preview.className = 'details-preview';
         preview.innerHTML = `<a href="${streamUrl}" target="_blank" title="點擊前往直播"><img src="${getYouTubeThumbnail(streamUrl)}" class="stream-thumb" loading="lazy"></a>`;
       }
     } else {
