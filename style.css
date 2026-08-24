@@ -230,24 +230,46 @@ body {
 /* 📱 手機版微調 (螢幕寬度 < 600px) */
 @media (max-width: 599px) {
   .controls {
-    gap: 0.6rem 0.4rem;      /* 縮小控制區塊內部間距 */
+    gap: 0.6rem 0.3rem;      /* 縮小控制區塊內部間距 */
   }
   .search-wrapper {
     flex: 1 1 100%;     /* 手機版搜尋列獨占第一列 */
   }
   .embed-toggle-wrapper {
-    font-size: 0.85rem;     /* 稍微縮小開關文字大小 */
+    font-size: 0.82rem;
+    gap: 0.3rem;
+  }
+  .embed-toggle-switch {
+    width: 42px;
+    height: 22px;
+  }
+  .embed-toggle-switch .slider:before {
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    top: 3px;
+    font-size: 9px;
+  }
+  .embed-toggle-switch input:checked + .slider:before {
+    transform: translateX(20px);
   }
   .sort-group {
-    font-size: 0.85rem; /* 小螢幕稍微縮小字級 */
-    margin-left: auto;      /* 讓排序自動靠右對齊，開關靠左 */
-    max-width: 58%;         /* 限制排序區塊最大寬度，確保不擠壓左側開關 */
+    margin-left: auto;
+    gap: 0.2rem;
+    flex: 1;
+    justify-content: flex-end;/
   }
 
-  .sort-group {
-    padding: 0.4rem 0.3rem; /* 縮小選單內距，釋放橫向空間 */
-    font-size: 0.82rem;
-    width: 100%;
+  /* 關鍵優化：手機版隱藏「排序：」標籤文字，直接看下拉選單內容更直覺 */
+  .sort-group label {
+    display: none;
+  }
+
+  .sort-group #sortSelect {
+    padding: 0.4rem 1.2rem 0.4rem 0.4rem; /* 緊湊內距，保留右側箭頭空間 */
+    font-size: 0.8rem;
+    width: auto;
+    max-width: 100%;
   }
 }
 
