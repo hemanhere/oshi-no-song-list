@@ -129,8 +129,7 @@ function updateCardMedia(card) {
     const { id, start } = parseYouTubeUrl(streamUrl);
     if (id && isEmbed) {
       preview.className = 'details-preview embed-container';
-      preview.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1${start ? `&start=${start}` : ''}" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    } else if (id) {
+      preview.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}${start ? `?start=${start}` : ''}" title="${title}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       preview.className = 'details-preview';
       preview.innerHTML = `<a href="${streamUrl}" target="_blank"><img src="${getYouTubeThumbnail(streamUrl)}" class="stream-thumb" loading="lazy"></a>`;
     } else {
@@ -189,11 +188,9 @@ document.getElementById('sortSelect').addEventListener('change', handleSortAndRe
 
 // 初始化開關狀態 (讀取 localStorage)
 if (embedPlayerToggle) {
-  const savedEmbedState = localStorage.getItem('useEmbedPlayer') === 'true';
-  embedPlayerToggle.checked = savedEmbedState;
+  embedPlayerToggle.checked = false;
 
   embedPlayerToggle.addEventListener('change', (e) => {
-    localStorage.setItem('useEmbedPlayer', e.target.checked);
   // 切換開關時，僅更新卡片 DOM，保持原本的展開狀態
     document.querySelectorAll('.song-card').forEach(updateCardMedia);    
   });
