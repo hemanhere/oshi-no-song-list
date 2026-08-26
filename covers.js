@@ -7,21 +7,26 @@ window.addEventListener('scroll', () => {
   const topBar = document.querySelector('.top-bar');
   const controls = document.querySelector('.controls');
 
-  // 防止手機端彈跳捲動 (Bounce effect / Elastic scrolling) 產生負值
-  if (currentScrollY < 0) return;
+  if (!topBar || !controls) return;
 
-  // 1. 當「向下捲動」且捲動超過一定距離時 (例如 50px)
-  if (currentScrollY > lastScrollY && currentScrollY > 50) {
+  // 防止手機端彈跳捲動 (Elastic scrolling) 產生負值
+  if (currentScrollY <= 0) {
+    topBar.classList.remove('hide-header');
+    controls.classList.remove('hide-header');
+    return;
+  }
+
+  // 向下捲動超過 60px 時完全隱藏兩個區塊
+  if (currentScrollY > lastScrollY && currentScrollY > 60) {
     topBar.classList.add('hide-header');
     controls.classList.add('hide-header');
   } 
-  // 2. 當「向上捲動」時，立刻顯示第一區塊與第二區塊
+  // 向上捲動時立刻完整恢復顯示
   else if (currentScrollY < lastScrollY) {
     topBar.classList.remove('hide-header');
     controls.classList.remove('hide-header');
   }
 
-  // 更新上一次的捲動位置
   lastScrollY = currentScrollY;
 });
 

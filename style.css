@@ -105,10 +105,10 @@ body {
   gap: 0.8rem 1rem;      /* 上下間距 0.8rem，左右間距 1rem */
   margin-bottom: 0.5rem;
   position: sticky;       /* 開啟 sticky 定位 */
-  top: 45px;                 /* 滑動至頂部時固定 */
+  top: 56px;                 /* 滑動至頂部時固定 */
   z-index: 9;             /* 較低層級，會鑽到第一區塊後面 */
   background-color: #f4f4f6; /* 設定不透明背景，避免下方的卡片內容透出來 */
-  padding: 0.4rem 0;      /* 增加上下內邊距，提升滑動時的視覺舒適度 */
+  padding: 0.5rem 0;      /* 增加上下內邊距，提升滑動時的視覺舒適度 */
 }
 
 .search-wrapper {
@@ -150,7 +150,7 @@ body {
 }
 
 .controls.hide-header {
-  transform: translateY(-100%); /* 第二區塊更往上推藏起來 */
+  transform: translateY(-200%); /* 第二區塊更往上推藏起來 */
 }
 
 /* --- 開關與說明文字外層容器 --- */
