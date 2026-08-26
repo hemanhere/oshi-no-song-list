@@ -3,4 +3,5 @@
 3. Cover finalize
 4. Json format finalize
 5. add hashtag seraching
-6. add iframe 
+6. add iframe
+7. change scroll style 

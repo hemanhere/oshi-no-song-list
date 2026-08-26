@@ -150,7 +150,7 @@ body {
 }
 
 .controls.hide-header {
-  transform: translateY(-200%); /* 第二區塊更往上推藏起來 */
+  transform: translateY(-100%); /* 第二區塊更往上推藏起來 */
 }
 
 /* --- 開關與說明文字外層容器 --- */
