@@ -1,5 +1,29 @@
 let coversData = [];
 let currentlyOpenOrder = null;
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const topBar = document.querySelector('.top-bar');
+  const controls = document.querySelector('.controls');
+
+  // 防止手機端彈跳捲動 (Bounce effect / Elastic scrolling) 產生負值
+  if (currentScrollY < 0) return;
+
+  // 1. 當「向下捲動」且捲動超過一定距離時 (例如 50px)
+  if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    topBar.classList.add('hide-header');
+    controls.classList.add('hide-header');
+  } 
+  // 2. 當「向上捲動」時，立刻顯示第一區塊與第二區塊
+  else if (currentScrollY < lastScrollY) {
+    topBar.classList.remove('hide-header');
+    controls.classList.remove('hide-header');
+  }
+
+  // 更新上一次的捲動位置
+  lastScrollY = currentScrollY;
+});
 
 function getYouTubeId(url) {
   if (!url) return '';

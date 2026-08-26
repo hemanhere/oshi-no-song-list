@@ -103,12 +103,12 @@ body {
   flex-wrap: wrap;       /* 關鍵 1：手機版空間不足時自動折行 */
   align-items: center; /* 關鍵：讓所有元件以中心點垂直對齊 */
   gap: 0.8rem 1rem;      /* 上下間距 0.8rem，左右間距 1rem */
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
   position: sticky;       /* 開啟 sticky 定位 */
-  top: 53px;                 /* 滑動至頂部時固定 */
+  top: 45px;                 /* 滑動至頂部時固定 */
   z-index: 9;             /* 較低層級，會鑽到第一區塊後面 */
   background-color: #f4f4f6; /* 設定不透明背景，避免下方的卡片內容透出來 */
-  padding: 0.8rem 0;      /* 增加上下內邊距，提升滑動時的視覺舒適度 */
+  padding: 0.4rem 0;      /* 增加上下內邊距，提升滑動時的視覺舒適度 */
 }
 
 .search-wrapper {
