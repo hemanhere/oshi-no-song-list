@@ -14,16 +14,23 @@ body {
   padding-bottom: 40px;
 }
 
+/* ================================================== */
+/* 頂部固定容器 (將第一區塊與第二區塊包含在內)        */
+/* ================================================== */
+.top-bar, .controls {
+  /* 平滑過渡動畫：當捲軸改變方向時，讓選單平滑滑入/滑出 */
+  transition: transform 0.3s ease-in-out;
+}
+
+
 /* 頁首頂部列 */
 .top-bar {
   background-color: #8b0000;
   color: white;
-  padding: 0.5rem 0; /* 左右邊距由內層 container 統一控制，確保與下方內容對齊 */
-  margin-bottom: 1rem;
+  padding: 1rem 0; /* 左右邊距由內層 container 統一控制，確保與下方內容對齊 */
   position: sticky;       /* 開啟 sticky 定位 */
   top: 0;                 /* 捲動至頂部時固定 */
   z-index: 10;            /* 較高層級，覆蓋第二區塊 */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* 可選：加陰影增加層次感 */
 }
 
 /* Menu 導覽列與選單 */
@@ -100,7 +107,7 @@ body {
   position: sticky;       /* 開啟 sticky 定位 */
   top: 0;                 /* 滑動至頂部時固定 */
   z-index: 5;             /* 較低層級，會鑽到第一區塊後面 */
-  background-color: #fff; /* 設定不透明背景，避免下方的卡片內容透出來 */
+  background-color: #ffffff; /* 設定不透明背景，避免下方的卡片內容透出來 */
   padding: 0.8rem 0;      /* 增加上下內邊距，提升滑動時的視覺舒適度 */
 }
 
@@ -132,6 +139,18 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+/* ================================================== */
+/* 向上/向下捲動的隱藏樣式                             */
+/* ================================================== */
+/* 當向下捲動時，透過 JS 加上的 Class */
+.top-bar.hide-header {
+  transform: translateY(-100%); /* 第一區塊向上滑出螢幕 */
+}
+
+.controls.hide-header {
+  transform: translateY(-200%); /* 第二區塊更往上推藏起來 */
 }
 
 /* --- 開關與說明文字外層容器 --- */
