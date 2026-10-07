@@ -1,6 +1,6 @@
 let coversData = [];
 let currentlyOpenOrder = null;
-let lastScrollY = window.scrollY;
+//let lastScrollY = window.scrollY;
 
 /*window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;

@@ -1,5 +1,5 @@
 let songsData = [];
-let lastScrollY = window.scrollY;
+//let lastScrollY = window.scrollY;
 
 /*window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
@@ -218,7 +218,7 @@ function handleSortAndRender() {
 const searchInput = document.getElementById('searchInput');
 const clearSearchBtn = document.getElementById('clearSearchBtn');
 //const menuToggleBtn = document.getElementById('menuToggleBtn');
-const menuNav = document.getElementById('menuNav');
+//const menuNav = document.getElementById('menuNav');
 const embedPlayerToggle = document.getElementById('embedPlayerToggle');
 
 // 事件監聽
