@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於</title>
+  <!-- 引入您現有的主樣式表 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 共用頂部欄 (與 index.html 相同) -->
+  <header class="top-bar">
+    <div class="container menu-container">
+      <h1>關於本站</h1>
+      <button id="menuToggleBtn" class="menu-btn">☰ MENU</button>
+      <nav id="menuNav" class="menu-dropdown hidden">
+        <a href="index.html">🎵 歌單列表 </a>
+        <a href="covers.html" class="active">🎙️ 翻唱歌曲 </a>
+        <a href="#" onclick="alert('數據分析頁面開發中！'); return false;">📊 數據分析 </a>
+        <a href="about.html">ℹ️ 關於</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 關於頁面主要內容 -->
+  <main class="container about-container">
+    
+    <!-- APNG 動畫看板圖 -->
+    <div class="about-hero">
+      <!-- 替換 src 為您的 APNG 檔案路徑 -->
+      <img src="images/wave.png" alt="花咲くれは" class="about-mascot">
+      <h2>關於</h2>
+    </div>
+
+    <!-- 網站簡介 -->
+    <section class="about-section">
+      <h3>網站簡介</h3>
+      <p>本網站整理 VTuber <strong>花咲くれは</strong>的歌單與翻唱作品，提供便捷的檢索、伴奏連結與即時補檔功能。</p>
+      
+      <div class="sns-links">
+        <a href="https://www.youtube.com/@kureha_1130" target="_blank" class="sns-btn sns-yt">
+          YouTube
+        </a>
+        <a href="https://x.com/_KRHana" target="_blank" class="sns-btn sns-x">
+          𝕏 Twitter
+        </a>
+        <a href="https://ci-en.net/creator/25901" target="_blank" class="sns-btn sns-cien">
+          Ci-en 專頁
+        </a>
+      </div>
+    </section>
+
+    <!-- 功能開發歷程 -->
+    <section class="about-section">
+      <h3>功能開發歷程</h3>
+      <ul class="timeline">
+        <li><span class="timeline-date">2026/08/26</span> 優化網頁卷軸動態效果，加入便捷的置頂功能區塊</li>
+        <li><span class="timeline-date">2026/08/24</span> 加入 iframe 內嵌播放器，提供「靜態連結」與「直接觀看」切換按鈕</li>
+        <li><span class="timeline-date">2026/08/23</span> 完成 RWD 響應式網頁設計，全面支援行動裝置瀏覽</li>
+        <li><span class="timeline-date">2026/08/22</span> 建立減輕讀取負擔的卡匣式架構，並導入快速搜尋功能</li>
+        <li><span class="timeline-date">2026/08/21</span> 專案計畫啟動</li>
+      </ul>
+    </section>
+
+    <!-- 免責與版權聲明 -->
+    <section class="about-section">
+      <h3>免責與版權聲明</h3>
+      <ul class="disclaimer-list">
+        <li>本網站由 Heman 獨立開發與維護，為非官方的粉絲整理網站。</li>
+        <li>本站所嵌入或連結之 YouTube 影片、歌曲伴奏及原唱資訊，其影音版權與著作權均歸屬原創作者、唱片公司及原官方頻道所有。本站不直接儲存任何影音檔案。</li>
+        <li>本網站為純交流分享性質，不包含任何歸屬於網站作者的商業營利行為。</li>
+      </ul>
+    </section>
+
+    <!-- 特別致謝 -->
+    <section class="about-section">
+      <h3>特別致謝</h3>
+      <p>感謝花咲くれは一直以來在直播中的努力。</p>
+      <p>感謝所有在直播留言區辛苦建立時間軸的觀眾，大幅加速了本站資料的整理進度。</p>
+    </section>
+
+    <!-- 聯絡與問題回報 -->
+    <section class="about-section">
+      <h3>聯絡與問題回報</h3>
+      <p>本站歌單資料均為人工整理，若有錯字、日期或連結錯誤<del class="joke-strike">，歡迎加入花咲くれは的Ci-en在くれは的官方DC頻道可以找到Heman進行回報。</del></p>
+      <a href="mailto:hemanhehe543@gmail.com" class="contact-mail">📧 hemanhehe543@gmail.com</a>
+    </section>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <p>© 2026 Heman. 非官方整理網站.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

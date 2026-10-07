@@ -570,3 +570,178 @@ details[open] .triangle-icon {
   font-size: 0.85rem;
   margin-top: 2rem;
 }
+
+/* ================================================== */
+/* 4. 關於頁面專屬樣式 (about.html - 全新新增)         */
+/* ================================================== */
+
+.about-container {
+  max-width: 760px; /* 比首頁稍微窄一點，讓閱讀文字更舒適 */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+/* APNG 動態看板圖區域 */
+.about-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px dashed #eee;
+}
+
+.about-mascot {
+  width: 160px; 
+  height: 160px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+  display: block;
+  /* 加入輕微的浮動呼吸感動畫 */
+  animation: float-anim 3s ease-in-out infinite;
+}
+
+.about-mascot:hover {
+  animation-play-state: paused; /* 滑鼠移過去時暫停動畫 */
+}
+
+@keyframes float-anim {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.about-hero h2 {
+  color: #8b0000;
+  font-size: 1.8rem;
+}
+
+/* 區塊通用設定 */
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.about-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-section h3::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1.2rem;
+  background-color: #8b0000;
+  border-radius: 2px;
+}
+
+.about-section p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* 官方社群按鈕區 */
+.sns-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.sns-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.sns-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.sns-yt { background-color: #FF0000; color: #fff; }
+.sns-cien { background-color: #F39C12; color: #fff; }
+/* 套用您之前要求過的 𝕏 黑色圓底風格變體 */
+.sns-x { background-color: #000; color: #fff; padding-left: 1rem; }
+
+/* 歷程時間軸 */
+.timeline {
+  list-style: none;
+  padding-left: 10px;
+  border-left: 3px solid #f0f0f0;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  background-color: #8b0000;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #8b0000;
+  margin-right: 0.5rem;
+}
+
+/* 免責聲明列表 */
+.disclaimer-list {
+  padding-left: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.disclaimer-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* 聯絡我們與刪除線特調 */
+.joke-strike {
+  color: #999;
+  text-decoration-color: #8b0000;
+}
+
+.contact-mail {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #0066cc;
+  text-decoration: none;
+}
+.contact-mail:hover { text-decoration: underline; }
+
+/* RWD 手機版微調 */
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+  .about-mascot {
+    width: 130px;
+    height: 130px;
+  }
+}
