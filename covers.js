@@ -2,7 +2,7 @@ let coversData = [];
 let currentlyOpenOrder = null;
 let lastScrollY = window.scrollY;
 
-window.addEventListener('scroll', () => {
+/*window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
   const topBar = document.querySelector('.top-bar');
   const controls = document.querySelector('.controls');
@@ -28,7 +28,7 @@ window.addEventListener('scroll', () => {
   }
 
   lastScrollY = currentScrollY;
-});
+});*/
 
 function getYouTubeId(url) {
   if (!url) return '';
@@ -172,13 +172,13 @@ function handleSortAndRender() {
 // 事件綁定
 document.addEventListener('DOMContentLoaded', () => {
   // MENU 開關控制
-  const menuBtn = document.getElementById('menuToggleBtn');
+  /*const menuBtn = document.getElementById('menuToggleBtn');
   const menuNav = document.getElementById('menuNav');
   menuBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     menuNav.classList.toggle('hidden');
   });
-  document.addEventListener('click', () => menuNav.classList.add('hidden'));
+  document.addEventListener('click', () => menuNav.classList.add('hidden'));*/
 
   // 搜尋與排序事件
   const searchInput = document.getElementById('searchInput');

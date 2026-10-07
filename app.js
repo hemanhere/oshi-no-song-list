@@ -1,7 +1,7 @@
 let songsData = [];
 let lastScrollY = window.scrollY;
 
-window.addEventListener('scroll', () => {
+/*window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
   const topBar = document.querySelector('.top-bar');
   const controls = document.querySelector('.controls');
@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
   }
 
   lastScrollY = currentScrollY;
-});
+});*/
 
 // 解析 YouTube Video ID 與時間秒數 (t=1m20s 或 t=80)
 function parseYouTubeUrl(url) {
@@ -217,7 +217,7 @@ function handleSortAndRender() {
 
 const searchInput = document.getElementById('searchInput');
 const clearSearchBtn = document.getElementById('clearSearchBtn');
-const menuToggleBtn = document.getElementById('menuToggleBtn');
+//const menuToggleBtn = document.getElementById('menuToggleBtn');
 const menuNav = document.getElementById('menuNav');
 const embedPlayerToggle = document.getElementById('embedPlayerToggle');
 
@@ -248,9 +248,9 @@ clearSearchBtn.addEventListener('click', () => {
 });
 
 // Menu 切換顯示邏輯
-menuToggleBtn.addEventListener('click', () => {
+/*menuToggleBtn.addEventListener('click', () => {
   menuNav.classList.toggle('hidden');
-});
+});*/
 
 // 頁面載入執行
 fetchSongs();
