@@ -1,4 +1,5 @@
 let songsData = [];
+let songsLoadState = 'idle';
 //let lastScrollY = window.scrollY;
 
 /*window.addEventListener('scroll', () => {
@@ -58,14 +59,25 @@ function getYouTubeThumbnail(url) {
 
 // 初始化：載入 JSON 資料
 async function fetchSongs() {
+  songsLoadState = 'loading';
+  showListStatus('songList', '正在載入歌單，請稍候…');  
   try {
     const response = await fetch('songList.json');
+    if (!response.ok) {
+      throw new Error(`歌單資料請求失敗：HTTP ${response.status}`);
+    }
     songsData = await response.json();
-    
+    songsLoadState = 'ready';
     // 預設依「最新直播日期 (由新到舊)」排序並渲染
     handleSortAndRender();
   } catch (error) {
+    songsLoadState = 'error';
     console.error('資料載入失敗:', error);
+    showLoadError(
+      'songList',
+      '歌單資料載入失敗，請稍後重試。',
+      fetchSongs
+    );
   }
 }
 
@@ -75,15 +87,22 @@ function renderSongs(songs) {
   container.innerHTML = '';
 
   if (songs.length === 0) {
-    container.innerHTML = '<p style="text-align:center; color:#888;">找不到符合條件的歌曲</p>';
+    //container.innerHTML = '<p style="text-align:center; color:#888;">找不到符合條件的歌曲</p>';
+    showListStatus(
+      'songList',
+      songsData.length === 0
+        ? '目前尚無歌單資料。'
+        : '找不到符合條件的歌曲。'
+    );
     return;
   }
 
   songs.forEach(song => {
+    const karaokeUrl = getOptionalUrl(song.karaokeUrl);
     const card = document.createElement('div');
     card.className = 'song-card';
 
-    card.dataset.streamUrl = song.latestStreamUrl || '';
+    card.dataset.streamUrl = getOptionalUrl(song.latestStreamUrl);
     card.dataset.title = song.title || '';
     
     card.innerHTML = `
@@ -107,8 +126,8 @@ function renderSongs(songs) {
             <p><strong>原唱：</strong> ${song.artist}</p>
             <p class="vod-link-p"></p>
             <p><strong>カラオケ (伴奏)：</strong> 
-              ${song.karaokeUrl 
-                ? `<a href="${song.karaokeUrl}" target="_blank" class="btn-link">${song.karaokeTitle || '點我看 YT 伴奏'} </a>` 
+              ${karaokeUrl
+                ? `<a href="${karaokeUrl}" target="_blank" class="btn-link">${song.karaokeTitle || '點我看 YT 伴奏'} </a>`
                 : '<span style="color: #888;">(待補)</span>'}
             </p>
             <p><strong>備註：</strong> ${song.note || '無'}</p>
@@ -147,8 +166,26 @@ function updateCardMedia(card) {
   const detailsEl = card.querySelector('details');
 
   if (vodP) {
-    vodP.style.display = isEmbed ? 'none' : 'block';
-    vodP.innerHTML = `<strong>最新直播 VOD：</strong> <a href="${streamUrl}" target="_blank" class="btn-link">點我看當次直播 </a>`;
+    // 沒有網址時，即使啟用播放器也顯示「待補」
+    vodP.style.display = isEmbed && streamUrl ? 'none' : 'block';
+
+    const label = document.createElement('strong');
+    label.textContent = '最新直播 VOD：';
+    vodP.replaceChildren(label, ' ');
+
+    if (streamUrl) {
+      const link = document.createElement('a');
+      link.href = streamUrl;
+      link.target = '_blank';
+      link.className = 'btn-link';
+      link.textContent = '點我看當次直播';
+      vodP.append(link);
+    } else {
+      const placeholder = document.createElement('span');
+      placeholder.style.color = '#888';
+      placeholder.textContent = '(待補)';
+      vodP.append(placeholder);
+    }  
   }
 
   if (!preview) return;
@@ -178,6 +215,7 @@ function updateCardMedia(card) {
 
 // 排序與搜尋邏輯
 function handleSortAndRender() {
+  if (songsLoadState !== 'ready') return;
   const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
   const [field, direction] = document.getElementById('sortSelect').value.split('-');
 
@@ -205,10 +243,14 @@ function handleSortAndRender() {
     }
 
     if (direction === 'asc') {
-      return valA > valB ? 1 : -1;
+      if (valA > valB) return 1;
+      if (valA < valB) return -1;
     } else {
-      return valA < valB ? 1 : -1;
+      if (valA < valB) return 1;
+      if (valA > valB) return -1;
     }
+    // 日期或演唱次數相同時，依演唱序由大到小排列
+    return b.order - a.order;
   });
 
   // 3. 渲染出圖

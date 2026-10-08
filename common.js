@@ -11,6 +11,7 @@ window.addEventListener('scroll', () => {
   if (currentScrollY <= 0) {
     topBar.classList.remove('hide-header');
     if (controls) controls.classList.remove('hide-header');
+    lastScrollY = 0;
     return;
   }
 
@@ -39,3 +40,46 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', () => menuNav.classList.add('hidden'));
   }
 });
+
+// 顯示資料載入失敗訊息，提供重新載入按鈕
+function showLoadError(containerId, message, retryLoad) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const errorBox = document.createElement('div');
+  errorBox.className = 'no-result';
+  errorBox.setAttribute('role', 'alert');
+
+  const description = document.createElement('p');
+  description.textContent = message;
+
+  const retryButton = document.createElement('button');
+  retryButton.type = 'button';
+  retryButton.textContent = '重新載入';
+
+  retryButton.addEventListener('click', () => {
+    description.textContent = '正在重新載入，請稍候…';
+    retryButton.disabled = true;
+    retryButton.textContent = '載入中…';
+    retryLoad();
+  });
+
+  errorBox.append(description, retryButton);
+  container.replaceChildren(errorBox);
+}
+// 顯示載入中或空列表等一般狀態
+function showListStatus(containerId, message) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const status = document.createElement('p');
+  status.className = 'no-result';
+  status.setAttribute('role', 'status');
+  status.textContent = message;
+
+  container.replaceChildren(status);
+}
+// 整理選填網址；未填寫時回傳空字串
+function getOptionalUrl(value) {
+  return typeof value === 'string' ? value.trim() : '';
+}

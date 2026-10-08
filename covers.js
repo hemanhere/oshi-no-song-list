@@ -1,4 +1,5 @@
 let coversData = [];
+let coversLoadState = 'idle';
 let currentlyOpenOrder = null;
 //let lastScrollY = window.scrollY;
 
@@ -43,12 +44,24 @@ function getYouTubeThumbnail(url) {
 
 // 載入翻唱歌曲資料
 async function fetchCovers() {
+  coversLoadState = 'loading';
+  showListStatus('coverList', '正在載入翻唱作品，請稍候…');
   try {
     const res = await fetch('covers.json');
+    if (!res.ok) {
+      throw new Error(`翻唱資料請求失敗：HTTP ${res.status}`);
+    }
     coversData = await res.json();
+    coversLoadState = 'ready';
     handleSortAndRender();
   } catch (err) {
+    coversLoadState = 'error';
     console.error('載入 covers.json 失敗：', err);
+    showLoadError(
+      'coverList',
+      '翻唱資料載入失敗，請稍後重試。',
+      fetchCovers
+    );
   }
 }
 
@@ -58,17 +71,26 @@ function renderCovers(covers) {
   const isEmbedEnabled = document.getElementById('embedToggle')?.checked || false;
 
   if (covers.length === 0) {
-    container.innerHTML = '<p class="no-result">查無相關翻唱歌曲</p>';
+    //container.innerHTML = '<p class="no-result">查無相關翻唱歌曲</p>';
+    showListStatus(
+      'coverList',
+      coversData.length === 0
+        ? '目前尚無翻唱作品資料。'
+        : '找不到符合條件的翻唱作品。'
+    );
     return;
   }
 
   container.innerHTML = covers.map(cover => {
-    const videoId = getYouTubeId(cover.coverUrl);
+    const coverUrl = getOptionalUrl(cover.coverUrl);
+    const originalUrl = getOptionalUrl(cover.originalUrl);
+    const karaokeUrl = getOptionalUrl(cover.karaokeUrl);
+    const videoId = getYouTubeId(coverUrl);
     const isOpen = (currentlyOpenOrder === cover.order.toString());
     const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
 
     // 關鍵修改 1：將播放網址存於 data-src，僅在預設展開時填入 src
-    const embedHtml = (isEmbedEnabled && videoId) ? `
+    /*const embedHtml = (isEmbedEnabled && videoId) ? `
       <div class="details-preview">
         <div class="embed-container">
           <iframe 
@@ -79,18 +101,25 @@ function renderCovers(covers) {
           </iframe>
         </div>
       </div>
+    ` : '';*/
+    // 先建立空容器，卡片展開時才建立播放器
+    const embedHtml = (isEmbedEnabled && videoId) ? `
+      <div class="details-preview" data-embed-url="${embedUrl}"></div>
     ` : '';
-
     return `
     <details class="song-card" data-order="${cover.order}" ${isOpen ? 'open' : ''}>
       <summary class="cover-summary">
         <span class="cover-order">#${cover.order}</span>
-        ${getYouTubeThumbnail(cover.coverUrl) ? `
-          <img src="${getYouTubeThumbnail(cover.coverUrl)}" alt="縮圖" class="cover-thumb-first-layer" loading="lazy">
+        ${getYouTubeThumbnail(coverUrl) ? `
+          <img src="${getYouTubeThumbnail(coverUrl)}" alt="縮圖" class="cover-thumb-first-layer" loading="lazy">
         ` : ''}
-        <a href="${cover.coverUrl}" target="_blank" class="cover-title-link" onclick="event.stopPropagation();">
-          ${cover.title} 
-        </a>
+        ${coverUrl
+          ? `<a href="${coverUrl}" target="_blank" class="cover-title-link" onclick="event.stopPropagation();">
+              ${cover.title}
+            </a>`
+          : `<span class="cover-title-link">
+              ${cover.title} <small>（影片連結待補）</small>
+            </span>`}
         <span class="cover-date">發布日期：${cover.releaseDate}</span>
         <div class="details-hint">
           詳細資訊 <span class="triangle-icon">▼</span>
@@ -100,11 +129,13 @@ function renderCovers(covers) {
       <div class="card-details">
         <div class="details-info">
           <p><strong>本家樣：</strong> 
-            <a href="${cover.originalUrl}" target="_blank" class="btn-link">${cover.originalTitle || '點我看本家樣'} </a>
+            ${originalUrl
+              ? `<a href="${originalUrl}" target="_blank" class="btn-link">${cover.originalTitle || '點我看本家樣'} </a>`
+              : `<span>${cover.originalTitle || ''}</span> <span style="color: #888;">(連結待補)</span>`}
           </p>
           <p><strong>カラオケ (伴奏)：</strong> 
-            ${cover.karaokeUrl 
-              ? `<a href="${cover.karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} </a>` 
+            ${karaokeUrl
+              ? `<a href="${karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} </a>`
               : '<span style="color: #888;">(待補)</span>'}
           </p>
           <p><strong>備註：</strong> ${cover.note || '無'}</p>
@@ -113,47 +144,68 @@ function renderCovers(covers) {
       </div>
     </details>
   `}).join('');
-
   bindDetailsEvents();
 }
 
+// 依卡片展開狀態建立或移除播放器
+function updateCoverMedia(details) {
+  const preview = details.querySelector('.details-preview');
+  if (!preview) return;
+
+  if (!details.open) {
+    preview.replaceChildren();
+    return;
+  }
+
+  const embedUrl = preview.dataset.embedUrl;
+  if (!embedUrl || preview.querySelector('iframe')) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'embed-container';
+
+  const iframe = document.createElement('iframe');
+  iframe.src = embedUrl;
+  iframe.title =
+    details.querySelector('.cover-title-link')?.textContent.trim() || '翻唱影片';
+  iframe.allowFullscreen = true;
+  iframe.allow =
+    'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+
+  wrapper.append(iframe);
+  preview.replaceChildren(wrapper);
+}
+
   // 3. 新增：綁定展開事件 (手風琴與停止播放邏輯)
+// 綁定卡片事件，管理展開狀態與播放器
 function bindDetailsEvents() {
   const detailsList = document.querySelectorAll('.song-card');
-  detailsList.forEach(details => {
-    details.addEventListener('toggle', function() {
-      const iframe = this.querySelector('iframe');
 
+  detailsList.forEach(details => {
+    // 為重繪後仍保持展開的卡片建立播放器
+    updateCoverMedia(details);
+
+    details.addEventListener('toggle', function() {
       if (this.open) {
         currentlyOpenOrder = this.dataset.order;
 
-        // 關鍵修改 2：卡片於「可見狀態」展開時，才從 data-src 載入影片，確保元件初始化成功
-        if (iframe && iframe.dataset.src && iframe.src !== iframe.dataset.src) {
-          iframe.src = iframe.dataset.src;
-        }
-
-        // 手風琴效果：關閉其他卡片
         detailsList.forEach(other => {
           if (other !== this && other.open) {
             other.open = false;
+            updateCoverMedia(other);
           }
         });
-      } else {
-        // 關鍵修改 3：卡片關閉時直接清空 src，順暢停止播放且不破壞隱藏狀態下的渲染
-        if (iframe) {
-          iframe.src = '';
-        }
-
-        if (currentlyOpenOrder === this.dataset.order) {
-          currentlyOpenOrder = null;
-        }
+      } else if (currentlyOpenOrder === this.dataset.order) {
+        currentlyOpenOrder = null;
       }
+
+      updateCoverMedia(this);
     });
   });
 }
 
 // 處理排序與搜尋過濾
 function handleSortAndRender() {
+  if (coversLoadState !== 'ready') return;
   const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
   const sortValue = document.getElementById('sortSelect').value;
 
