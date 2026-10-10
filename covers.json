@@ -10,6 +10,11 @@
     "karaokeUrl": "",
     "credits": [
       {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
         "role": "Illust",
         "name": "クロラ",
         "url": "https://x.com/chlora17"
@@ -31,7 +36,24 @@
     "originalUrl": "https://youtu.be/K4xLi8IF1FM?si=a2f2HLLfXAGhXWeH",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ Illust：若太郎（𝕏 /wakastawei）<br>■ Mix：Oggi（𝕏 /oggi_mix）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "若太郎",
+        "url": "https://x.com/wakastawei"
+      },
+      {
+        "role": "Mix",
+        "name": "Oggi",
+        "url": "https://x.com/oggi_mix"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 3,
@@ -42,7 +64,29 @@
     "originalUrl": "https://youtu.be/u0OvEzIYYPM?si=cARSTrIlKebv2uaO",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ Illust：瑞樹くりむ（𝕏 /773_cream）<br>■ Mix：Oggi（𝕏 /oggi_mix）<br>■ Movie：雪乃羽弥（𝕏 /yukinohaya1122）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "瑞樹くりむ",
+        "url": "https://x.com/773_cream"
+      },
+      {
+        "role": "Mix",
+        "name": "Oggi",
+        "url": "https://x.com/oggi_mix"
+      },
+      {
+        "role": "Movie",
+        "name": "雪乃羽弥",
+        "url": "https://x.com/yukinohaya1122"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 4,
@@ -53,7 +97,29 @@
     "originalUrl": "https://youtu.be/Egy8RZKxC5k?si=SA95IcSbNRIlbA45",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ Illust：梨月（𝕏 /riz_miz）<br>■ Mix：Oggi（𝕏 /oggi_mix）<br>■ Movie：雪乃羽弥（𝕏 /yukinohaya1122）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "梨月",
+        "url": "https://x.com/riz_miz"
+      },
+      {
+        "role": "Mix",
+        "name": "Oggi",
+        "url": "https://x.com/oggi_mix"
+      },
+      {
+        "role": "Movie",
+        "name": "雪乃羽弥",
+        "url": "https://x.com/yukinohaya1122"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 5,
@@ -64,7 +130,34 @@
     "originalUrl": "https://youtu.be/w8yweCungCE?si=PrPDttk8-RuDe_g5",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ Vocal：𝒲 /水縹そまる（𝕏 /somaruriro）<br>■ illust：こるこるの（𝕏 /korukoruno）<br>■ mix：Oggi（𝕏 /oggi_mix）<br>■ movie：らいり（𝕏 /_Rai28）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "水縹そまる",
+        "url": "https://x.com/somaruriro"
+      },
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "こるこるの",
+        "url": "https://x.com/korukoruno"
+      },
+      {
+        "role": "Mix",
+        "name": "Oggi",
+        "url": "https://x.com/oggi_mix"
+      },
+      {
+        "role": "Movie",
+        "name": "らいり",
+        "url": "https://x.com/_Rai28"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 6,
@@ -75,7 +168,29 @@
     "originalUrl": "https://youtu.be/8RmZFUxos3E?si=xnroVKj4lGzVDnCV",
     "karaokeTitle": "【カラオケ】ぎゅっと。/もさを。　女性キー(-3)",
     "karaokeUrl": "https://youtu.be/CxsD6YIdE3A?si=6vmiQlX4fxlOe3fl",
-    "note": "<br>■ Illust：梨月（𝕏 /riz_miz）<br>■ Mix：Oggi（𝕏 /oggi_mix）<br>■ Movie：花咲くれは（𝕏 /_krhana）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "梨月",
+        "url": "https://x.com/riz_miz"
+      },
+      {
+        "role": "Mix",
+        "name": "Oggi",
+        "url": "https://x.com/oggi_mix"
+      },
+      {
+        "role": "Movie",
+        "name": "花咲くれは",
+        "url": "https://x.com/_krhana"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 7,
@@ -86,7 +201,39 @@
     "originalUrl": "https://youtu.be/CgO1WEDGZuM?si=foimrAbo8hzt-se5",
     "karaokeTitle": "Buono! - ホントのじぶん (Instrumental)",
     "karaokeUrl": "https://youtu.be/_xgNleCR9hY?si=Ka-PMIiGX5OrULfK",
-    "note": "<br>■ Vocal1：𝒲 /清水紗智子（𝕏 /shimizusachiko_）<br>■ Vocal2：𝒲 /天櫻咲樂（𝕏 /Huayu_Sakura）<br>■ Illust：Maruccy（𝕏 /Maru_ccy）<br>■ Mix：厚奶蓋混音（𝕏 /hounaigai）<br>■ Movie：🌧天氣雨🌧（𝕏 /amakiiiiii_ame）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "清水紗智子",
+        "url": "https://x.com/shimizusachiko"
+      },
+      {
+        "role": "Vocal",
+        "name": "天櫻咲樂",
+        "url": "https://x.com/Huayu_Sakura"
+      },
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "Maruccy",
+        "url": "https://x.com/Maru_ccy"
+      },
+      {
+        "role": "Mix",
+        "name": "厚奶蓋混音",
+        "url": "https://x.com/hounaigai"
+      },
+      {
+        "role": "Movie",
+        "name": "🌧天氣雨🌧",
+        "url": "https://x.com/amakiiiiii_ame"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 8,
@@ -97,7 +244,29 @@
     "originalUrl": "https://youtu.be/dDK8fk17MqQ?si=NDxokjr2yvwLE8e5",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ Illust：天麗（𝕏 /tnri_0404）<br>■ Mix：Nisshi（𝕏 /nisshi1115）<br>■ Movie：てる（𝕏 /teru_0129）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "天麗",
+        "url": "https://x.com/tnri_0404"
+      },
+      {
+        "role": "Mix",
+        "name": "Nisshi",
+        "url": "https://x.com/nisshi1115"
+      },
+      {
+        "role": "Movie",
+        "name": "てる",
+        "url": "https://x.com/teru_0129"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 9,
@@ -108,7 +277,29 @@
     "originalUrl": "https://youtu.be/naz0-szzYXk?si=UtaECx69xJIztOw5",
     "karaokeTitle": "【ピアノ伴奏カラオケ】もう恋なんてしない / 槇原敬之【女性キー】",
     "karaokeUrl": "https://youtu.be/U1qqwBP_25s?si=R_ST1ej3pqmz-L1t",
-    "note": "<br>■ Illust：oN（𝕏 /oN303m）<br>■ Mix：Nisshi（𝕏 /nisshi1115）<br>■ Movie：Ao（𝕏 /Ao_o77）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "oN",
+        "url": "https://x.com/oN303m"
+      },
+      {
+        "role": "Mix",
+        "name": "Nisshi",
+        "url": "https://x.com/nisshi1115"
+      },
+      {
+        "role": "Movie",
+        "name": "Ao",
+        "url": "https://x.com/Ao_o77"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 10,
@@ -119,6 +310,96 @@
     "originalUrl": "https://youtu.be/1j-u11dHWnI?si=xjXc12VKZWqTTBSU",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ Vocal1：𝒲 /水縹そまる（𝕏 /somaruriro）<br>■ Vocal2：𝒲 /流川莉蘿（𝕏 /riloruru）<br>■ Vocal3：𝒲 /UFO醬（𝕏 /mochiufo）<br>■ Illust：なないのり（𝕏 /nanainori15）<br>■ Mix：バロン（𝕏 /baron_mix）<br>■ Movie：LeeRi（𝕏 /elaina_leeri）"
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "UFO醬",
+        "url": "https://x.com/mochiufo"
+      },
+      {
+        "role": "Vocal",
+        "name": "水縹そまる",
+        "url": "https://x.com/somaruriro"
+      },
+      {
+        "role": "Vocal",
+        "name": "流川莉蘿",
+        "url": "https://x.com/riloruru"
+      },
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "なないのり",
+        "url": "https://x.com/nanainori15"
+      },
+      {
+        "role": "Mix",
+        "name": "バロン",
+        "url": "https://x.com/baron_mix"
+      },
+      {
+        "role": "Movie",
+        "name": "LeeRi",
+        "url": "https://x.com/elaina_leeri"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "order": 11,
+    "title": "Alice in N.Y.",
+    "coverUrl": "https://youtu.be/b9AEhGlkslg?si=ZBWim89cCdmPg8S3",
+    "releaseDate": "2026-10-05",
+    "originalTitle": "[ ボカロ10人 / Vocaloid 10 ] 紐約愛麗絲 [ 原創PV / Original PV ]",
+    "originalUrl": "https://youtu.be/Rg5r1k-pZGU?si=xwk0GAYLpilzCSzr",
+    "karaokeTitle": "",
+    "karaokeUrl": "",
+    "credits": [
+      {
+        "role": "Vocal",
+        "name": "浠Mizuki",
+        "url": "https://x.com/MizukiVtuberTW"
+      },
+      {
+        "role": "Vocal",
+        "name": "水縹そまる",
+        "url": "https://x.com/somaruriro"
+      },
+      {
+        "role": "Vocal",
+        "name": "流川莉蘿",
+        "url": "https://x.com/riloruru"
+      },
+      {
+        "role": "Vocal",
+        "name": "柊メト",
+        "url": "https://x.com/M3t0_x"
+      },
+      {
+        "role": "Vocal",
+        "name": "花咲くれは",
+        "url": "https://x.com/_KRHana"
+      },
+      {
+        "role": "Illust",
+        "name": "兎未枝ウミエ",
+        "url": "https://x.com/umieekaki"
+      },
+      {
+        "role": "Mix",
+        "name": "イケベタクロウ　(t.o.)",
+        "url": "https://x.com/to_mix6831"
+      },
+      {
+        "role": "Movie",
+        "name": "LeeRi",
+        "url": "https://x.com/elaina_leeri"
+      }
+    ],
+    "note": ""
   }
 ]
