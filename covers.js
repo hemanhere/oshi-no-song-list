@@ -72,7 +72,7 @@ function renderCoverCredits(container, credits) {
   if (!Array.isArray(credits) || credits.length === 0) return;
 
   const heading = document.createElement('strong');
-  heading.textContent = '製作名單：';
+  heading.textContent = '演出與製作：';
 
   const list = document.createElement('ul');
   list.className = 'credits-list';
@@ -89,9 +89,19 @@ function renderCoverCredits(container, credits) {
 
     const item = document.createElement('li');
 
-    const text = document.createElement('span');
-    text.textContent = role ? `${role}：${name}` : name;
-    item.append(text);
+    const roleLabel = document.createElement('span');
+    roleLabel.className = 'credit-role';
+    roleLabel.textContent = role;
+
+    const person = document.createElement('span');
+    person.className = 'credit-person';
+
+    const nameLabel = document.createElement('span');
+    nameLabel.className = 'credit-name';
+    nameLabel.textContent = name;
+
+    person.append(nameLabel);
+    item.append(roleLabel, person);
 
     const rawUrl = getOptionalUrl(credit.url);
 
@@ -120,7 +130,7 @@ function renderCoverCredits(container, credits) {
             `${name}的${isX ? 'X 頁面' : '相關連結'}（另開分頁）`
           );
 
-          item.append(' ', link);
+          person.append(link);
         }
       } catch {
         // 網址無法解析時，仍保留職務與姓名

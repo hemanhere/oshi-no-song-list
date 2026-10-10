@@ -745,44 +745,106 @@ details[open] .triangle-icon {
     height: 130px;
   }
 }
-/* 翻唱作品製作名單 */
+/* 翻唱作品製作名單：簡潔雙欄 */
 .cover-credits {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
-/* 尚未填寫製作名單時，不占用版面 */
 .cover-credits:empty {
   display: none;
 }
 
-.credits-list {
-  list-style: square;
-  margin: 0.35rem 0 0;
-  padding-left: 1.2rem;
+/* 區塊標題 */
+.cover-credits > strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #8b0000;
+  font-size: 0.9rem;
 }
 
+/* 移除原本的項目符號 */
+.credits-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 左側職務固定寬度，右側使用剩餘空間 */
 .credits-list li {
-  line-height: 1.7;
-  overflow-wrap: anywhere;
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 0.75rem;
+  line-height: 1.6;
 }
 
 .credits-list li + li {
-  margin-top: 0.2rem;
+  margin-top: 0.55rem;
 }
 
+/* 職務 */
+.credit-role {
+  color: #777;
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+/* 姓名與社群連結 */
+.credit-person {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+  min-width: 0;
+}
+
+.credit-name {
+  min-width: 0;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* 社群連結小按鈕 */
 .credit-link {
-  display: inline-block;
-  margin-left: 0.25rem;
-  color: #0066cc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 1.75rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 1.5;
   text-decoration: none;
   white-space: nowrap;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background-color 0.2s;
 }
 
-.credit-link:hover {
-  text-decoration: underline;
+.credit-link:hover,
+.credit-link:focus-visible {
+  color: #8b0000;
+  border-color: #8b0000;
+  background-color: #fff3f3;
+  text-decoration: none;
 }
 
 .credit-link:focus-visible {
-  outline: 2px solid #0066cc;
+  outline: 2px solid #8b0000;
   outline-offset: 2px;
+}
+
+/* 小螢幕縮小職務欄，保留姓名空間 */
+@media (max-width: 599px) {
+  .credits-list li {
+    grid-template-columns: 4.75rem minmax(0, 1fr);
+    column-gap: 0.5rem;
+  }
 }
