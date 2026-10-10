@@ -745,3 +745,44 @@ details[open] .triangle-icon {
     height: 130px;
   }
 }
+/* 翻唱作品製作名單 */
+.cover-credits {
+  margin-top: 0.5rem;
+}
+
+/* 尚未填寫製作名單時，不占用版面 */
+.cover-credits:empty {
+  display: none;
+}
+
+.credits-list {
+  list-style: square;
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.credits-list li {
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.credits-list li + li {
+  margin-top: 0.2rem;
+}
+
+.credit-link {
+  display: inline-block;
+  margin-left: 0.25rem;
+  color: #0066cc;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.credit-link:hover {
+  text-decoration: underline;
+}
+
+.credit-link:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}

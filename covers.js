@@ -65,6 +65,76 @@ async function fetchCovers() {
   }
 }
 
+// 顯示製作名單：姓名與職務以純文字呈現
+function renderCoverCredits(container, credits) {
+  container.replaceChildren();
+
+  if (!Array.isArray(credits) || credits.length === 0) return;
+
+  const heading = document.createElement('strong');
+  heading.textContent = '製作名單：';
+
+  const list = document.createElement('ul');
+  list.className = 'credits-list';
+
+  credits.forEach(credit => {
+    if (!credit || typeof credit !== 'object') return;
+
+    const name =
+      typeof credit.name === 'string' ? credit.name.trim() : '';
+    const role =
+      typeof credit.role === 'string' ? credit.role.trim() : '';
+
+    if (!name) return;
+
+    const item = document.createElement('li');
+
+    const text = document.createElement('span');
+    text.textContent = role ? `${role}：${name}` : name;
+    item.append(text);
+
+    const rawUrl = getOptionalUrl(credit.url);
+
+    if (rawUrl) {
+      try {
+        const url = new URL(rawUrl);
+
+        // 僅為有效的 HTTP／HTTPS 網址建立連結
+        if (url.protocol === 'https:' || url.protocol === 'http:') {
+          const link = document.createElement('a');
+          link.href = url.href;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.className = 'credit-link';
+
+          const isX = [
+            'x.com',
+            'www.x.com',
+            'twitter.com',
+            'www.twitter.com'
+          ].includes(url.hostname);
+
+          link.textContent = isX ? '𝕏' : '連結';
+          link.setAttribute(
+            'aria-label',
+            `${name}的${isX ? 'X 頁面' : '相關連結'}（另開分頁）`
+          );
+
+          item.append(' ', link);
+        }
+      } catch {
+        // 網址無法解析時，仍保留職務與姓名
+      }
+    }
+
+    list.append(item);
+  });
+
+  if (list.childElementCount > 0) {
+    container.append(heading, list);
+  }
+}
+
 // 2. 修改：渲染函數加入狀態維持與 iframe 動態生成
 function renderCovers(covers) {
   const container = document.getElementById('coverList');
@@ -138,12 +208,18 @@ function renderCovers(covers) {
               ? `<a href="${karaokeUrl}" target="_blank" class="btn-link">${cover.karaokeTitle || '點我看 YT 伴奏'} </a>`
               : '<span style="color: #888;">(待補)</span>'}
           </p>
+          <div class="cover-credits"></div>
           <p><strong>備註：</strong> ${cover.note || '無'}</p>
         </div>
         ${embedHtml}
       </div>
     </details>
   `}).join('');
+  // 依目前搜尋、排序後的順序，填入各張卡片的製作名單
+  container.querySelectorAll('.cover-credits').forEach((element, index) => {
+    renderCoverCredits(element, covers[index].credits);
+  });
+  
   bindDetailsEvents();
 }
 

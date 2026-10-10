@@ -8,7 +8,19 @@
     "originalUrl": "https://youtu.be/aHNWL7MBXoc?si=88Dm5bqErv7IU5Nq",
     "karaokeTitle": "",
     "karaokeUrl": "",
-    "note": "<br>■ Illust：クロラ（𝕏 /chlora17）<br>■ Mix：Oggi（𝕏 /oggi_mix）"
+    "credits": [
+      {
+        "role": "Illust",
+        "name": "クロラ",
+        "url": "https://x.com/chlora17"
+      },
+      {
+        "role": "Mix",
+        "name": "Oggi",
+        "url": "https://x.com/oggi_mix"
+      }
+    ],
+    "note": ""
   },
   {
     "order": 2,
