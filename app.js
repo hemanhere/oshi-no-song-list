@@ -52,9 +52,54 @@ function parseYouTubeUrl(url) {
   return { id, start };
 }
 
-function getYouTubeThumbnail(url) {
+function getYouTubeThumbnail(url, quality = 'maxresdefault') {
   const { id } = parseYouTubeUrl(url);
-  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '';
+  return id ? `https://img.youtube.com/vi/${id}/${quality}.jpg` : '';
+}
+
+// 縮圖與播放器共用 16:9 外框，低解析度佔位圖也視為載入失敗。
+function createStreamThumbnail(streamUrl, title) {
+  const link = document.createElement('a');
+  link.href = streamUrl;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.title = '點擊前往直播';
+  link.className = 'embed-container stream-preview';
+  link.setAttribute('aria-label', `${title || '直播'}：點擊前往直播`);
+
+  const image = document.createElement('img');
+  image.className = 'stream-thumb';
+  image.alt = `${title || '直播'}的影片縮圖`;
+  image.loading = 'lazy';
+  let usingFallback = false;
+
+  function showUnavailable() {
+    const message = document.createElement('span');
+    message.className = 'stream-thumbnail-fallback';
+    message.textContent = '縮圖無法載入，點此前往直播';
+    link.replaceChildren(message);
+  }
+
+  function loadFallback() {
+    if (!link.isConnected) return;
+    if (usingFallback) {
+      showUnavailable();
+      return;
+    }
+    usingFallback = true;
+    image.src = getYouTubeThumbnail(streamUrl, 'hqdefault');
+  }
+
+  image.addEventListener('error', loadFallback);
+  image.addEventListener('load', () => {
+    // YouTube 有時以 HTTP 200 回傳 120×90 的無縮圖佔位圖。
+    if (image.naturalWidth <= 120 && image.naturalHeight <= 90) {
+      loadFallback();
+    }
+  });
+  image.src = getYouTubeThumbnail(streamUrl);
+  link.append(image);
+  return link;
 }
 
 // 初始化：載入 JSON 資料
@@ -202,8 +247,8 @@ function updateCardMedia(card) {
           </div>
         `;
       } else {
-        // Toggle 關閉：顯示圖片縮圖
-        preview.innerHTML = `<a href="${streamUrl}" target="_blank" title="點擊前往直播"><img src="${getYouTubeThumbnail(streamUrl)}" class="stream-thumb" loading="lazy"></a>`;
+        // Toggle 關閉：顯示高解析縮圖，必要時退回 hqdefault。
+        preview.replaceChildren(createStreamThumbnail(streamUrl, title));
       }
     } else {
       preview.innerHTML = '';

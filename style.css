@@ -640,13 +640,31 @@ details[open] .triangle-icon {
   border: 0;
 }
 
-.stream-thumb {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+.stream-preview {
   display: block;
-  margin: 0 auto; /* 手機版：居中排列 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.stream-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 保留 4:3 備援縮圖的完整內容，不裁切或拉伸 */
+  display: block;
+}
+
+.stream-thumbnail-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
 }
 
 .btn-link {
@@ -684,11 +702,6 @@ details[open] .triangle-icon {
     gap: 1rem;
   }
 
-  .stream-thumb {
-    margin-left: auto;  /* 電腦版：自動將縮圖推至右側邊界 */
-    margin-right: 0;
-  }
-  
   .details-info {
     flex: 1;
   }
@@ -734,7 +747,7 @@ details[open] .triangle-icon {
 /* ================================================== */
 
 .about-container {
-  max-width: 760px; /* 比首頁稍微窄一點，讓閱讀文字更舒適 */
+  max-width: 960px; /* 比首頁稍微窄一點，讓閱讀文字更舒適 */
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
