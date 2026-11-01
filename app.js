@@ -223,7 +223,7 @@ function updateCardMedia(card) {
       link.href = streamUrl;
       link.target = '_blank';
       link.className = 'btn-link';
-      link.textContent = '點我看當次直播';
+      link.textContent = '前往';
       vodP.append(link);
     } else {
       const placeholder = document.createElement('span');
