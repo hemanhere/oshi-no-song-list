@@ -5809,15 +5809,15 @@
   },
   {
     "order": 485,
-    "title": "CH4NGE（プラクティス）",
+    "title": "CH4NGE",
     "artist": "KAFU",
-    "latestStreamDate": "2024-01-19",
-    "latestStreamUrl": "https://www.youtube.com/live/6EZS7Oah5UQ?si=zg5B_fnwXRSiCHDG&t=6799",
-    "latestStreamTitle": "【#歌枠 】久違的快樂唱歌！復健歌回~【花咲くれは】",
-    "singCount": 1,
+    "latestStreamDate": "2025-03-04",
+    "latestStreamUrl": "https://www.youtube.com/live/OQHi9-2WWmg?si=Y-n0JMb50wxhZB87&t=5980",
+    "latestStreamTitle": "【 #歌回 】吃晚餐配歌回套餐【花咲くれは】",
+    "singCount": 2,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "#練唱"
+    "note": ""
   },
   {
     "order": 486,
@@ -7045,18 +7045,6 @@
   },
   {
     "order": 588,
-    "title": "CH4NGE",
-    "artist": "可不",
-    "latestStreamDate": "2025-03-04",
-    "latestStreamUrl": "https://www.youtube.com/live/OQHi9-2WWmg?si=Y-n0JMb50wxhZB87&t=5980",
-    "latestStreamTitle": "【 #歌回 】吃晚餐配歌回套餐【花咲くれは】",
-    "singCount": 2,
-    "karaokeUrl": "",
-    "karaokeTitle": "",
-    "note": ""
-  },
-  {
-    "order": 589,
     "title": "你的酒館對我打了烊",
     "artist": "陳雪凝",
     "latestStreamDate": "2024-09-09",
@@ -7068,7 +7056,7 @@
     "note": ""
   },
   {
-    "order": 590,
+    "order": 589,
     "title": "如果沒有你",
     "artist": "莫文蔚",
     "latestStreamDate": "2024-09-09",
@@ -7080,7 +7068,7 @@
     "note": ""
   },
   {
-    "order": 591,
+    "order": 590,
     "title": "幸福的聲音",
     "artist": "林佑威",
     "latestStreamDate": "2024-12-10",
@@ -7092,7 +7080,7 @@
     "note": ""
   },
   {
-    "order": 592,
+    "order": 591,
     "title": "幸福不是情歌",
     "artist": "劉若英",
     "latestStreamDate": "2024-09-30",
@@ -7104,7 +7092,7 @@
     "note": ""
   },
   {
-    "order": 593,
+    "order": 592,
     "title": "未拆的禮物",
     "artist": "品冠",
     "latestStreamDate": "2024-09-09",
@@ -7116,7 +7104,7 @@
     "note": ""
   },
   {
-    "order": 594,
+    "order": 593,
     "title": "指揮家",
     "artist": "任賢齊",
     "latestStreamDate": "2024-09-09",
@@ -7128,7 +7116,7 @@
     "note": ""
   },
   {
-    "order": 595,
+    "order": 594,
     "title": "暫時的男朋友",
     "artist": "嚴爵",
     "latestStreamDate": "2024-09-09",
@@ -7140,7 +7128,7 @@
     "note": ""
   },
   {
-    "order": 596,
+    "order": 595,
     "title": "まどろみの約束",
     "artist": "佐藤聰美、 茅野愛衣",
     "latestStreamDate": "2026-03-07",
@@ -7152,7 +7140,7 @@
     "note": "#冰菓"
   },
   {
-    "order": 597,
+    "order": 596,
     "title": "愛包ダンスホール",
     "artist": "HIMEHINA",
     "latestStreamDate": "2026-06-20",
@@ -7164,7 +7152,7 @@
     "note": ""
   },
   {
-    "order": 598,
+    "order": 597,
     "title": "光年之外",
     "artist": "鄧紫棋",
     "latestStreamDate": "2024-09-12",
@@ -7176,7 +7164,7 @@
     "note": ""
   },
   {
-    "order": 599,
+    "order": 598,
     "title": "アルビレオ",
     "artist": "ロクデナシ",
     "latestStreamDate": "2026-08-10",
@@ -7188,7 +7176,7 @@
     "note": "#aiueo"
   },
   {
-    "order": 600,
+    "order": 599,
     "title": "もう恋なんてしない",
     "artist": "槇原敬之",
     "latestStreamDate": "2026-07-16",
@@ -7200,7 +7188,7 @@
     "note": ""
   },
   {
-    "order": 601,
+    "order": 600,
     "title": "ファタール",
     "artist": "GEMN",
     "latestStreamDate": "2025-06-20",
@@ -7212,7 +7200,7 @@
     "note": "#Heman"
   },
   {
-    "order": 602,
+    "order": 601,
     "title": "アイネクラ",
     "artist": "米津玄師",
     "latestStreamDate": "2024-09-16",
@@ -7224,7 +7212,7 @@
     "note": ""
   },
   {
-    "order": 603,
+    "order": 602,
     "title": "灰色と青",
     "artist": "米津玄師",
     "latestStreamDate": "2024-09-16",
@@ -7236,7 +7224,7 @@
     "note": ""
   },
   {
-    "order": 604,
+    "order": 603,
     "title": "天体観測",
     "artist": "BUMP OF CHICKEN",
     "latestStreamDate": "2024-09-16",
@@ -7248,7 +7236,7 @@
     "note": ""
   },
   {
-    "order": 605,
+    "order": 604,
     "title": "威風堂々（プラクティス）",
     "artist": "巡音ルカ、初音ミク、鏡音リン",
     "latestStreamDate": "2024-09-16",
@@ -7260,7 +7248,7 @@
     "note": "#練唱"
   },
   {
-    "order": 606,
+    "order": 605,
     "title": "男の子の目的は何？",
     "artist": "高見澤亞里沙（CV：東山奈央）",
     "latestStreamDate": "2024-09-30",
@@ -7272,7 +7260,7 @@
     "note": ""
   },
   {
-    "order": 607,
+    "order": 606,
     "title": "ねえねえねえ。",
     "artist": "鏡音リン、初音ミク",
     "latestStreamDate": "2024-09-30",
@@ -7284,19 +7272,19 @@
     "note": ""
   },
   {
-    "order": 608,
-    "title": "三時のキス（プラクティス）",
+    "order": 607,
+    "title": "三時のキス",
     "artist": "ロクデナシ",
-    "latestStreamDate": "2024-09-30",
-    "latestStreamUrl": "https://www.youtube.com/live/-SK1YtgPBlw?si=2ofB7D217U70mFSi&t=4727",
-    "latestStreamTitle": "【#縦型 #歌回】9月的最後一天！唱歌陪你上班【花咲くれは】",
-    "singCount": 1,
+    "latestStreamDate": "2025-07-14",
+    "latestStreamUrl": "https://www.youtube.com/live/Kae9yvJH2hQ?si=qfPvSSg5bFh0FWAv&t=4010",
+    "latestStreamTitle": "【 3周年紀念歌回 】怎麼就唱歌唱了3年 太厲害了吧【花咲くれは】",
+    "singCount": 2,
     "karaokeUrl": "",
     "karaokeTitle": "",
-    "note": "#練唱  #aiueo"
+    "note": "#aiueo"
   },
   {
-    "order": 609,
+    "order": 608,
     "title": "ray",
     "artist": "BUMP OF CHICKEN",
     "latestStreamDate": "2024-09-30",
@@ -7308,7 +7296,7 @@
     "note": ""
   },
   {
-    "order": 610,
+    "order": 609,
     "title": "A whole new world",
     "artist": "Peabo Bryson、Regina Belle",
     "latestStreamDate": "2024-09-30",
@@ -7320,7 +7308,7 @@
     "note": "#Disney"
   },
   {
-    "order": 611,
+    "order": 610,
     "title": "にっこり^^調査隊のテーマ（プラクティス）",
     "artist": "鏡音リン、鏡音レン",
     "latestStreamDate": "2024-11-13",
@@ -7332,7 +7320,7 @@
     "note": "#練唱"
   },
   {
-    "order": 612,
+    "order": 611,
     "title": "こころのたまご",
     "artist": "Buono!",
     "latestStreamDate": "2025-10-07",
@@ -7344,7 +7332,7 @@
     "note": "#しゅごキャラ！"
   },
   {
-    "order": 613,
+    "order": 612,
     "title": "ブラックダイヤモンズ（プラクティス）",
     "artist": "水樹奈奈",
     "latestStreamDate": "2024-11-13",
@@ -7356,7 +7344,7 @@
     "note": "#練唱  #しゅごキャラ！"
   },
   {
-    "order": 614,
+    "order": 613,
     "title": "みんなのたまご",
     "artist": "しゅごキャラエッグ！",
     "latestStreamDate": "2024-11-13",
@@ -7368,7 +7356,7 @@
     "note": "#しゅごキャラ！"
   },
   {
-    "order": 615,
+    "order": 614,
     "title": "勇者",
     "artist": "YOASOBI",
     "latestStreamDate": "2026-03-07",
@@ -7380,7 +7368,7 @@
     "note": "#フリーレン"
   },
   {
-    "order": 616,
+    "order": 615,
     "title": "Watch Me",
     "artist": "前田佳織里、鬼頭明里",
     "latestStreamDate": "2025-10-07",
@@ -7392,7 +7380,7 @@
     "note": ""
   },
   {
-    "order": 617,
+    "order": 616,
     "title": "ガーネット",
     "artist": "奥華子",
     "latestStreamDate": "2025-05-26",
@@ -7404,7 +7392,7 @@
     "note": "#時かけ"
   },
   {
-    "order": 618,
+    "order": 617,
     "title": "I wonder",
     "artist": "Da-iCE",
     "latestStreamDate": "2024-11-30",
@@ -7416,7 +7404,7 @@
     "note": ""
   },
   {
-    "order": 619,
+    "order": 618,
     "title": "葛飾ラプソディー",
     "artist": "堂島孝平",
     "latestStreamDate": "2025-03-04",
@@ -7428,7 +7416,7 @@
     "note": ""
   },
   {
-    "order": 620,
+    "order": 619,
     "title": "元彼女のみなさまへ",
     "artist": "コレサワ",
     "latestStreamDate": "2026-05-30",
@@ -7440,7 +7428,7 @@
     "note": ""
   },
   {
-    "order": 621,
+    "order": 620,
     "title": "Anytime Anywhere",
     "artist": "milet",
     "latestStreamDate": "2025-05-22",
@@ -7452,7 +7440,7 @@
     "note": "#フリーレン"
   },
   {
-    "order": 622,
+    "order": 621,
     "title": "恋の魔法",
     "artist": "TOKOTOKO feat. ぱなまん",
     "latestStreamDate": "2025-09-06",
@@ -7464,7 +7452,7 @@
     "note": ""
   },
   {
-    "order": 623,
+    "order": 622,
     "title": "POP IN 2",
     "artist": "B小町",
     "latestStreamDate": "2025-10-07",
@@ -7476,7 +7464,7 @@
     "note": "#推しの子"
   },
   {
-    "order": 624,
+    "order": 623,
     "title": "ほうけんのしょがきえもした！",
     "artist": "鏡音リン、鏡音レン",
     "latestStreamDate": "2024-12-06",
@@ -7488,7 +7476,7 @@
     "note": "#國王與勇者"
   },
   {
-    "order": 625,
+    "order": 624,
     "title": "Beyond the way",
     "artist": "初音ミク、鏡音リン、鏡音レン",
     "latestStreamDate": "2024-12-10",
@@ -7500,7 +7488,7 @@
     "note": ""
   },
   {
-    "order": 626,
+    "order": 625,
     "title": "スカー",
     "artist": "キタニタツヤ",
     "latestStreamDate": "2024-12-10",
@@ -7512,7 +7500,7 @@
     "note": "#BLEACH"
   },
   {
-    "order": 627,
+    "order": 626,
     "title": "一旦ステイ TONIGHT",
     "artist": "不破 湊",
     "latestStreamDate": "2026-03-14",
@@ -7524,7 +7512,7 @@
     "note": ""
   },
   {
-    "order": 628,
+    "order": 627,
     "title": "私が明日死ぬなら",
     "artist": "キタニタツヤ",
     "latestStreamDate": "2025-07-27",
@@ -7536,7 +7524,7 @@
     "note": ""
   },
   {
-    "order": 629,
+    "order": 628,
     "title": "かわいいだけじゃだめですか？（プラクティス）",
     "artist": "CUTIE STREET",
     "latestStreamDate": "2026-03-07",
@@ -7548,7 +7536,7 @@
     "note": "#練唱"
   },
   {
-    "order": 630,
+    "order": 629,
     "title": "ずうっといっしょ!",
     "artist": "キタニタツヤ",
     "latestStreamDate": "2025-10-07",
@@ -7560,7 +7548,7 @@
     "note": "#Heman"
   },
   {
-    "order": 631,
+    "order": 630,
     "title": "踊り子",
     "artist": "Vaundy",
     "latestStreamDate": "2025-01-26",
@@ -7572,7 +7560,7 @@
     "note": ""
   },
   {
-    "order": 632,
+    "order": 631,
     "title": "I LOVE...",
     "artist": "Official髭男dism",
     "latestStreamDate": "2025-12-26",
@@ -7584,7 +7572,7 @@
     "note": ""
   },
   {
-    "order": 633,
+    "order": 632,
     "title": "ハレンチ",
     "artist": "ちゃんみな",
     "latestStreamDate": "2025-07-22",
@@ -7596,7 +7584,7 @@
     "note": "#Heman"
   },
   {
-    "order": 634,
+    "order": 633,
     "title": "ラクガキ",
     "artist": "もさを。",
     "latestStreamDate": "2025-02-28",
@@ -7608,7 +7596,7 @@
     "note": "#Heman"
   },
   {
-    "order": 635,
+    "order": 634,
     "title": "金星のダンス",
     "artist": "ナユタン星人 feat. 初音ミク",
     "latestStreamDate": "2025-02-28",
@@ -7620,7 +7608,7 @@
     "note": ""
   },
   {
-    "order": 636,
+    "order": 635,
     "title": "Bunny Girl",
     "artist": "AKASAKI",
     "latestStreamDate": "2026-10-14",
@@ -7632,7 +7620,7 @@
     "note": ""
   },
   {
-    "order": 637,
+    "order": 636,
     "title": "平行線",
     "artist": "ヨルシカ",
     "latestStreamDate": "2025-04-15",
@@ -7644,7 +7632,7 @@
     "note": ""
   },
   {
-    "order": 638,
+    "order": 637,
     "title": "マジLOVE1000%",
     "artist": "ST☆RISH",
     "latestStreamDate": "2025-05-20",
@@ -7656,7 +7644,7 @@
     "note": "#うたプリ"
   },
   {
-    "order": 639,
+    "order": 638,
     "title": "if",
     "artist": "西野カナ",
     "latestStreamDate": "2025-03-16",
@@ -7668,7 +7656,7 @@
     "note": "#Heman"
   },
   {
-    "order": 640,
+    "order": 639,
     "title": "Obsessed",
     "artist": "今津涉",
     "latestStreamDate": "2025-08-12",
@@ -7680,7 +7668,7 @@
     "note": ""
   },
   {
-    "order": 641,
+    "order": 640,
     "title": "モエチャッカファイア",
     "artist": "弌誠",
     "latestStreamDate": "2025-06-17",
@@ -7692,7 +7680,7 @@
     "note": ""
   },
   {
-    "order": 642,
+    "order": 641,
     "title": "恋の押し売り",
     "artist": "星川サラ",
     "latestStreamDate": "2025-04-10",
@@ -7704,7 +7692,7 @@
     "note": ""
   },
   {
-    "order": 643,
+    "order": 642,
     "title": "Rumor",
     "artist": "GUMI",
     "latestStreamDate": "2025-04-10",
@@ -7716,7 +7704,7 @@
     "note": ""
   },
   {
-    "order": 644,
+    "order": 643,
     "title": "偽物人間40号",
     "artist": "v flower",
     "latestStreamDate": "2025-05-14",
@@ -7728,7 +7716,7 @@
     "note": ""
   },
   {
-    "order": 645,
+    "order": 644,
     "title": "バッド・ダンス・ホール",
     "artist": "鏡音リン",
     "latestStreamDate": "2026-05-17",
@@ -7740,7 +7728,7 @@
     "note": "#練唱"
   },
   {
-    "order": 646,
+    "order": 645,
     "title": "アカシア",
     "artist": "BUMP OF CHICKEN",
     "latestStreamDate": "2026-02-22",
@@ -7752,7 +7740,7 @@
     "note": ""
   },
   {
-    "order": 647,
+    "order": 646,
     "title": "Flyer!",
     "artist": "v flower",
     "latestStreamDate": "2025-08-20",
@@ -7764,7 +7752,7 @@
     "note": ""
   },
   {
-    "order": 648,
+    "order": 647,
     "title": "プライド革命（プラクティス）",
     "artist": "CHiCO with HoneyWorks",
     "latestStreamDate": "2025-04-15",
@@ -7776,7 +7764,7 @@
     "note": "#練唱"
   },
   {
-    "order": 649,
+    "order": 648,
     "title": "新世界",
     "artist": "BUMP OF CHICKEN",
     "latestStreamDate": "2025-04-21",
@@ -7788,7 +7776,7 @@
     "note": ""
   },
   {
-    "order": 650,
+    "order": 649,
     "title": "イマジネーション",
     "artist": "SPYAIR",
     "latestStreamDate": "2025-07-14",
@@ -7800,7 +7788,7 @@
     "note": ""
   },
   {
-    "order": 651,
+    "order": 650,
     "title": "気まぐれロマンティック",
     "artist": "生物股長",
     "latestStreamDate": "2025-08-08",
@@ -7812,7 +7800,7 @@
     "note": ""
   },
   {
-    "order": 652,
+    "order": 651,
     "title": "桜ノ雨（プラクティス）",
     "artist": "初音ミク",
     "latestStreamDate": "2025-04-21",
@@ -7824,7 +7812,7 @@
     "note": "#練唱"
   },
   {
-    "order": 653,
+    "order": 652,
     "title": "栞",
     "artist": "クリープハイプ",
     "latestStreamDate": "2025-07-27",
@@ -7836,7 +7824,7 @@
     "note": ""
   },
   {
-    "order": 654,
+    "order": 653,
     "title": "相性×優勝ドロップス",
     "artist": "Idios",
     "latestStreamDate": "2026-03-14",
@@ -7848,7 +7836,7 @@
     "note": ""
   },
   {
-    "order": 655,
+    "order": 654,
     "title": "當你",
     "artist": "王心凌",
     "latestStreamDate": "2025-08-12",
@@ -7860,19 +7848,19 @@
     "note": ""
   },
   {
-    "order": 656,
+    "order": 655,
     "title": "ビビデバ（プラクティス）",
     "artist": "星街すいせい",
-    "latestStreamDate": "2025-05-22",
-    "latestStreamUrl": "https://www.youtube.com/live/LYRKKG8JR18?si=gxSBL8RoicycqlDr&t=3817",
-    "latestStreamTitle": "【 歌回 】辛苦了一整天 唱歌放鬆【花咲くれは】",
-    "singCount": 1,
+    "latestStreamDate": "2026-03-14",
+    "latestStreamUrl": "https://www.youtube.com/live/BESw5ELZYSg?si=jZv6g35DConGLqp6&t=6656",
+    "latestStreamTitle": "【 歌回 】聽說今天是白色情人節【花咲くれは】",
+    "singCount": 2,
     "karaokeUrl": "",
     "karaokeTitle": "",
     "note": "#練唱"
   },
   {
-    "order": 657,
+    "order": 656,
     "title": "絶対零度",
     "artist": "なとり",
     "latestStreamDate": "2025-07-27",
@@ -7884,7 +7872,7 @@
     "note": "#練唱"
   },
   {
-    "order": 658,
+    "order": 657,
     "title": "不該",
     "artist": "張惠妹、周杰倫",
     "latestStreamDate": "2025-10-07",
@@ -7896,7 +7884,7 @@
     "note": ""
   },
   {
-    "order": 659,
+    "order": 658,
     "title": "SPECIALZ",
     "artist": "King Gnu",
     "latestStreamDate": "2025-06-01",
@@ -7908,7 +7896,7 @@
     "note": "#呪術廻戦"
   },
   {
-    "order": 660,
+    "order": 659,
     "title": "もう一度",
     "artist": "もさを。",
     "latestStreamDate": "2025-06-03",
@@ -7920,7 +7908,7 @@
     "note": ""
   },
   {
-    "order": 661,
+    "order": 660,
     "title": "にじいろ",
     "artist": "絢香",
     "latestStreamDate": "2025-06-17",
@@ -7932,7 +7920,7 @@
     "note": ""
   },
   {
-    "order": 662,
+    "order": 661,
     "title": "夏は雨晒し",
     "artist": "須田景凪",
     "latestStreamDate": "2025-06-17",
@@ -7944,7 +7932,7 @@
     "note": ""
   },
   {
-    "order": 663,
+    "order": 662,
     "title": "帰りたくなったよ（プラクティス）",
     "artist": "いきものがかり",
     "latestStreamDate": "2025-06-17",
@@ -7956,7 +7944,7 @@
     "note": "#練唱"
   },
   {
-    "order": 664,
+    "order": 663,
     "title": "そんなbitterな話",
     "artist": "Vaundy",
     "latestStreamDate": "2026-02-14",
@@ -7968,7 +7956,7 @@
     "note": ""
   },
   {
-    "order": 665,
+    "order": 664,
     "title": "ユルファ",
     "artist": "ルス、なるせ、センラ",
     "latestStreamDate": "2025-07-04",
@@ -7980,7 +7968,7 @@
     "note": ""
   },
   {
-    "order": 666,
+    "order": 665,
     "title": "会いたいくて会いたいくて",
     "artist": "西野加奈",
     "latestStreamDate": "2025-07-04",
@@ -7992,7 +7980,7 @@
     "note": ""
   },
   {
-    "order": 667,
+    "order": 666,
     "title": "怪盜",
     "artist": "back number",
     "latestStreamDate": "2025-08-23",
@@ -8004,7 +7992,7 @@
     "note": "#Heman #aiueo"
   },
   {
-    "order": 668,
+    "order": 667,
     "title": "ハルジオン",
     "artist": "YOASOBI",
     "latestStreamDate": "2026-03-14",
@@ -8016,19 +8004,7 @@
     "note": ""
   },
   {
-    "order": 669,
-    "title": "三時のキス",
-    "artist": "ロクデナシ",
-    "latestStreamDate": "2025-07-14",
-    "latestStreamUrl": "https://www.youtube.com/live/Kae9yvJH2hQ?si=qfPvSSg5bFh0FWAv&t=4010",
-    "latestStreamTitle": "【 3周年紀念歌回 】怎麼就唱歌唱了3年 太厲害了吧【花咲くれは】",
-    "singCount": 1,
-    "karaokeUrl": "",
-    "karaokeTitle": "",
-    "note": "#aiueo"
-  },
-  {
-    "order": 670,
+    "order": 668,
     "title": "Magic",
     "artist": "Mrs. GREEN APPLE",
     "latestStreamDate": "2025-09-06",
@@ -8040,7 +8016,7 @@
     "note": ""
   },
   {
-    "order": 671,
+    "order": 669,
     "title": "瞬き（プラクティス）",
     "artist": "ミラクルチンパンジー",
     "latestStreamDate": "2025-07-22",
@@ -8052,7 +8028,7 @@
     "note": "#練唱  #ささみや"
   },
   {
-    "order": 672,
+    "order": 670,
     "title": "分手後不要做朋友",
     "artist": "梁文音",
     "latestStreamDate": "2026-02-14",
@@ -8064,7 +8040,7 @@
     "note": ""
   },
   {
-    "order": 673,
+    "order": 671,
     "title": "What is Love?",
     "artist": "TWICE",
     "latestStreamDate": "2025-08-08",
@@ -8076,7 +8052,7 @@
     "note": ""
   },
   {
-    "order": 674,
+    "order": 672,
     "title": "CHEER UP",
     "artist": "TWICE",
     "latestStreamDate": "2025-08-08",
@@ -8088,7 +8064,7 @@
     "note": ""
   },
   {
-    "order": 675,
+    "order": 673,
     "title": "Time for the moon night",
     "artist": "GFRIEND",
     "latestStreamDate": "2025-08-08",
@@ -8100,7 +8076,7 @@
     "note": "#Gfriend"
   },
   {
-    "order": 676,
+    "order": 674,
     "title": "江南",
     "artist": "林俊傑",
     "latestStreamDate": "2025-08-12",
@@ -8112,7 +8088,7 @@
     "note": ""
   },
   {
-    "order": 677,
+    "order": 675,
     "title": "Kiss me",
     "artist": "Sixpence None the Richer",
     "latestStreamDate": "2025-12-09",
@@ -8124,7 +8100,7 @@
     "note": ""
   },
   {
-    "order": 678,
+    "order": 676,
     "title": "まるつけ",
     "artist": "佐藤真冬(CV：矢野獎吾)",
     "latestStreamDate": "2025-08-23",
@@ -8136,7 +8112,7 @@
     "note": "#ギヴン"
   },
   {
-    "order": 679,
+    "order": 677,
     "title": "冬のはなし",
     "artist": "佐藤真冬(CV：矢野獎吾)",
     "latestStreamDate": "2025-12-26",
@@ -8148,7 +8124,7 @@
     "note": "#ギヴン"
   },
   {
-    "order": 680,
+    "order": 678,
     "title": "Funeral（アカペラ）",
     "artist": "三枝明那",
     "latestStreamDate": "2025-08-20",
@@ -8160,7 +8136,7 @@
     "note": "#清唱"
   },
   {
-    "order": 681,
+    "order": 679,
     "title": "ヴェルヴェット（アカペラ）",
     "artist": "ソフィア・ヴァレンタイン",
     "latestStreamDate": "2025-08-20",
@@ -8172,7 +8148,7 @@
     "note": "#清唱"
   },
   {
-    "order": 682,
+    "order": 680,
     "title": "Funeral",
     "artist": "三枝明那",
     "latestStreamDate": "2025-08-20",
@@ -8184,7 +8160,7 @@
     "note": ""
   },
   {
-    "order": 683,
+    "order": 681,
     "title": "僕らだけの主題歌",
     "artist": "センチミリメンタル",
     "latestStreamDate": "2025-08-23",
@@ -8196,7 +8172,7 @@
     "note": "#ギヴン"
   },
   {
-    "order": 684,
+    "order": 682,
     "title": "想像フォレスト",
     "artist": "IA",
     "latestStreamDate": "2025-08-30",
@@ -8208,7 +8184,7 @@
     "note": ""
   },
   {
-    "order": 685,
+    "order": 683,
     "title": "ないものねだり",
     "artist": "KANA-BOON",
     "latestStreamDate": "2025-08-30",
@@ -8220,7 +8196,7 @@
     "note": ""
   },
   {
-    "order": 686,
+    "order": 684,
     "title": "RAIN",
     "artist": "SEKAI NO OWARI",
     "latestStreamDate": "2025-08-30",
@@ -8232,7 +8208,7 @@
     "note": "#メアリと魔女の花"
   },
   {
-    "order": 687,
+    "order": 685,
     "title": "へたくそ（プラクティス）",
     "artist": "佐藤真冬(CV：矢野獎吾)",
     "latestStreamDate": "2025-08-30",
@@ -8244,7 +8220,7 @@
     "note": "#練唱  #ギヴン"
   },
   {
-    "order": 688,
+    "order": 686,
     "title": "ステージから君に捧ぐ",
     "artist": "佐藤真冬(CV：矢野獎吾)",
     "latestStreamDate": "2025-08-30",
@@ -8256,7 +8232,7 @@
     "note": "#ギヴン"
   },
   {
-    "order": 689,
+    "order": 687,
     "title": "結言（プラクティス）",
     "artist": "センチミリメンタル",
     "latestStreamDate": "2025-08-30",
@@ -8268,7 +8244,7 @@
     "note": "#練唱  #ギヴン"
   },
   {
-    "order": 690,
+    "order": 688,
     "title": "パレイド",
     "artist": "鹿島柊(CV：今井文也)",
     "latestStreamDate": "2026-09-02",
@@ -8280,7 +8256,7 @@
     "note": "#ギヴン"
   },
   {
-    "order": 691,
+    "order": 689,
     "title": "キヅアト",
     "artist": "センチミリメンタル",
     "latestStreamDate": "2025-08-30",
@@ -8292,7 +8268,7 @@
     "note": "#ギヴン"
   },
   {
-    "order": 692,
+    "order": 690,
     "title": "虹色のPuddle",
     "artist": "NIJISANJI",
     "latestStreamDate": "2025-08-30",
@@ -8304,7 +8280,7 @@
     "note": ""
   },
   {
-    "order": 693,
+    "order": 691,
     "title": "De Lu Lu",
     "artist": "VOLTACTION",
     "latestStreamDate": "2026-02-03",
@@ -8316,7 +8292,7 @@
     "note": "#練唱"
   },
   {
-    "order": 694,
+    "order": 692,
     "title": "RELOAD!!!!",
     "artist": "VOLTACTION",
     "latestStreamDate": "2025-08-30",
@@ -8328,7 +8304,7 @@
     "note": ""
   },
   {
-    "order": 695,
+    "order": 693,
     "title": "クスシキ",
     "artist": "Mrs. GREEN APPLE",
     "latestStreamDate": "2026-02-03",
@@ -8340,7 +8316,7 @@
     "note": "#くすりや"
   },
   {
-    "order": 696,
+    "order": 694,
     "title": "至少還有你",
     "artist": "林憶蓮",
     "latestStreamDate": "2026-07-16",
@@ -8352,7 +8328,7 @@
     "note": ""
   },
   {
-    "order": 697,
+    "order": 695,
     "title": "心情便利貼",
     "artist": "元若藍、吳忠明",
     "latestStreamDate": "2025-09-11",
@@ -8364,7 +8340,7 @@
     "note": ""
   },
   {
-    "order": 698,
+    "order": 696,
     "title": "微加幸福",
     "artist": "郁可唯",
     "latestStreamDate": "2025-09-11",
@@ -8376,7 +8352,7 @@
     "note": ""
   },
   {
-    "order": 699,
+    "order": 697,
     "title": "スーパーウルトラI LOVE YOU",
     "artist": "センチミリメンタル",
     "latestStreamDate": "2025-09-19",
@@ -8388,7 +8364,7 @@
     "note": "#ギヴン"
   },
   {
-    "order": 700,
+    "order": 698,
     "title": "Legend of Mermaid",
     "artist": "中田明日、見寺門仁美、淺野麻由美",
     "latestStreamDate": "2025-09-19",
@@ -8400,7 +8376,7 @@
     "note": "#珍珠美人魚"
   },
   {
-    "order": 701,
+    "order": 699,
     "title": "プロポーズ",
     "artist": "なとり",
     "latestStreamDate": "2026-03-07",
@@ -8412,7 +8388,7 @@
     "note": ""
   },
   {
-    "order": 702,
+    "order": 700,
     "title": "神様はじめましだ",
     "artist": "ハナエ",
     "latestStreamDate": "2025-10-13",
@@ -8424,7 +8400,7 @@
     "note": "#神様"
   },
   {
-    "order": 703,
+    "order": 701,
     "title": "宿命",
     "artist": "Official髭男dism",
     "latestStreamDate": "2025-10-13",
@@ -8436,7 +8412,7 @@
     "note": ""
   },
   {
-    "order": 704,
+    "order": 702,
     "title": "ゴーストルール",
     "artist": "初音ミク",
     "latestStreamDate": "2025-10-31",
@@ -8448,7 +8424,7 @@
     "note": ""
   },
   {
-    "order": 705,
+    "order": 703,
     "title": "とくべチュ、して",
     "artist": " =LOVE",
     "latestStreamDate": "2026-06-20",
@@ -8460,7 +8436,7 @@
     "note": ""
   },
   {
-    "order": 706,
+    "order": 704,
     "title": "にぎにぎにじたうん！",
     "artist": "周央サンゴ",
     "latestStreamDate": "2025-12-09",
@@ -8472,7 +8448,7 @@
     "note": ""
   },
   {
-    "order": 707,
+    "order": 705,
     "title": "IRIS OUT",
     "artist": "米津玄師",
     "latestStreamDate": "2026-02-03",
@@ -8484,7 +8460,7 @@
     "note": ""
   },
   {
-    "order": 708,
+    "order": 706,
     "title": "Subtitle",
     "artist": "Official髭男dism",
     "latestStreamDate": "2025-12-26",
@@ -8496,7 +8472,7 @@
     "note": ""
   },
   {
-    "order": 709,
+    "order": 707,
     "title": "君色に染まる",
     "artist": "TOKOTOKO",
     "latestStreamDate": "2026-07-16",
@@ -8508,7 +8484,7 @@
     "note": ""
   },
   {
-    "order": 710,
+    "order": 708,
     "title": "ヒバナ（プラクティス）",
     "artist": "初音ミク",
     "latestStreamDate": "2026-02-03",
@@ -8520,7 +8496,7 @@
     "note": "#練唱"
   },
   {
-    "order": 711,
+    "order": 709,
     "title": "好きすぎて滅！",
     "artist": "M!LK",
     "latestStreamDate": "2026-09-15",
@@ -8532,7 +8508,7 @@
     "note": ""
   },
   {
-    "order": 712,
+    "order": 710,
     "title": "88☆彡",
     "artist": "初音ミク、KAITO",
     "latestStreamDate": "2026-02-03",
@@ -8544,7 +8520,7 @@
     "note": ""
   },
   {
-    "order": 713,
+    "order": 711,
     "title": "Beat Eater",
     "artist": "Vivid BAD SQUAD、鏡音レン",
     "latestStreamDate": "2026-05-30",
@@ -8556,7 +8532,7 @@
     "note": "#Heman"
   },
   {
-    "order": 714,
+    "order": 712,
     "title": "Fire Dance",
     "artist": "Vivid BAD SQUAD",
     "latestStreamDate": "2026-02-03",
@@ -8568,7 +8544,7 @@
     "note": ""
   },
   {
-    "order": 715,
+    "order": 713,
     "title": "おもかげ",
     "artist": "Vaundy",
     "latestStreamDate": "2026-04-29",
@@ -8580,7 +8556,7 @@
     "note": ""
   },
   {
-    "order": 716,
+    "order": 714,
     "title": "アイロニ",
     "artist": "初音ミク",
     "latestStreamDate": "2026-02-03",
@@ -8592,7 +8568,7 @@
     "note": ""
   },
   {
-    "order": 717,
+    "order": 715,
     "title": "劣等上等",
     "artist": "Vivid BAD SQUAD、鏡音リン、鏡音レン",
     "latestStreamDate": "2026-02-03",
@@ -8604,7 +8580,7 @@
     "note": ""
   },
   {
-    "order": 718,
+    "order": 716,
     "title": "マトリョシカ",
     "artist": "初音ミク、GUMI",
     "latestStreamDate": "2026-02-03",
@@ -8616,7 +8592,7 @@
     "note": ""
   },
   {
-    "order": 719,
+    "order": 717,
     "title": "ヤンキーボーイ・ヤンキーガール（プラクティス）",
     "artist": "GUMI",
     "latestStreamDate": "2026-02-03",
@@ -8628,7 +8604,7 @@
     "note": "#練唱"
   },
   {
-    "order": 720,
+    "order": 718,
     "title": "Rapport",
     "artist": "キタニタツヤ",
     "latestStreamDate": "2026-02-03",
@@ -8640,7 +8616,7 @@
     "note": ""
   },
   {
-    "order": 721,
+    "order": 719,
     "title": "スピカ",
     "artist": "ロクデナシ",
     "latestStreamDate": "2026-08-10",
@@ -8652,7 +8628,7 @@
     "note": "#aiueo"
   },
   {
-    "order": 722,
+    "order": 720,
     "title": "1分1秒",
     "artist": "もさを。",
     "latestStreamDate": "2026-02-14",
@@ -8664,7 +8640,7 @@
     "note": "#Heman"
   },
   {
-    "order": 723,
+    "order": 721,
     "title": "月曜日の憂鬱",
     "artist": "天月、HoneyWorks",
     "latestStreamDate": "2026-02-14",
@@ -8676,7 +8652,7 @@
     "note": ""
   },
   {
-    "order": 724,
+    "order": 722,
     "title": "まなざしは光",
     "artist": "キタニタツヤ",
     "latestStreamDate": "2026-03-07",
@@ -8688,7 +8664,7 @@
     "note": ""
   },
   {
-    "order": 725,
+    "order": 723,
     "title": "倍倍FIGHT!",
     "artist": "CANDY TUNE",
     "latestStreamDate": "2026-06-20",
@@ -8700,19 +8676,7 @@
     "note": ""
   },
   {
-    "order": 726,
-    "title": "ビビデバ",
-    "artist": "星街すいせい",
-    "latestStreamDate": "2026-03-14",
-    "latestStreamUrl": "https://www.youtube.com/live/BESw5ELZYSg?si=jZv6g35DConGLqp6&t=6656",
-    "latestStreamTitle": "【 歌回 】聽說今天是白色情人節【花咲くれは】",
-    "singCount": 1,
-    "karaokeUrl": "",
-    "karaokeTitle": "",
-    "note": ""
-  },
-  {
-    "order": 727,
+    "order": 724,
     "title": "情非得已（プラクティス）",
     "artist": "庾澄慶",
     "latestStreamDate": "2026-04-29",
@@ -8724,7 +8688,7 @@
     "note": "#練唱"
   },
   {
-    "order": 728,
+    "order": 725,
     "title": "lulu.",
     "artist": "Mrs. GREEN APPLE",
     "latestStreamDate": "2026-09-15",
@@ -8736,7 +8700,7 @@
     "note": "#フリーレン"
   },
   {
-    "order": 729,
+    "order": 726,
     "title": "イイじゃん",
     "artist": "M!LK",
     "latestStreamDate": "2026-04-29",
@@ -8748,7 +8712,7 @@
     "note": ""
   },
   {
-    "order": 730,
+    "order": 727,
     "title": "きみにとどけ",
     "artist": "谷澤智文",
     "latestStreamDate": "2026-05-17",
@@ -8760,7 +8724,7 @@
     "note": "#君に届け  #Heman"
   },
   {
-    "order": 731,
+    "order": 728,
     "title": "透明な心臓が泣いていた",
     "artist": "甲斐田晴",
     "latestStreamDate": "2026-04-29",
@@ -8772,7 +8736,7 @@
     "note": ""
   },
   {
-    "order": 732,
+    "order": 729,
     "title": "JANE DOE（プラクティス）",
     "artist": "米津玄師、宇多田ヒカル",
     "latestStreamDate": "2026-04-29",
@@ -8784,7 +8748,7 @@
     "note": "#練唱"
   },
   {
-    "order": 733,
+    "order": 730,
     "title": "爆裂愛してる（プラクティス）",
     "artist": "M!LK",
     "latestStreamDate": "2026-05-17",
@@ -8796,7 +8760,7 @@
     "note": "#練唱"
   },
   {
-    "order": 734,
+    "order": 731,
     "title": "(有點難、待補5)",
     "artist": "待補",
     "latestStreamDate": "2026-05-30",
@@ -8808,7 +8772,7 @@
     "note": ""
   },
   {
-    "order": 735,
+    "order": 732,
     "title": "Ever",
     "artist": "ミセカイ",
     "latestStreamDate": "2026-05-30",
@@ -8820,7 +8784,7 @@
     "note": ""
   },
   {
-    "order": 736,
+    "order": 733,
     "title": "愛♡スクリ〜ム（プラクティス）",
     "artist": "AiScReam",
     "latestStreamDate": "2026-05-30",
@@ -8832,7 +8796,7 @@
     "note": "#練唱"
   },
   {
-    "order": 737,
+    "order": 734,
     "title": "ブラッディ・グルービー",
     "artist": "ChroNoiR",
     "latestStreamDate": "2026-05-30",
@@ -8844,7 +8808,7 @@
     "note": ""
   },
   {
-    "order": 738,
+    "order": 735,
     "title": "Geminids",
     "artist": "ChroNoiR",
     "latestStreamDate": "2026-05-30",
@@ -8856,7 +8820,7 @@
     "note": ""
   },
   {
-    "order": 739,
+    "order": 736,
     "title": "ロメオ",
     "artist": "LIP×LIP、初音ミク・GUMI",
     "latestStreamDate": "2026-06-20",
@@ -8868,7 +8832,7 @@
     "note": ""
   },
   {
-    "order": 740,
+    "order": 737,
     "title": "ダンス・デカダンス（プラクティス）",
     "artist": "Chevon",
     "latestStreamDate": "2026-06-20",
@@ -8880,7 +8844,7 @@
     "note": "#練唱"
   },
   {
-    "order": 741,
+    "order": 738,
     "title": "朋友",
     "artist": "周華健",
     "latestStreamDate": "2026-07-16",
@@ -8892,7 +8856,7 @@
     "note": ""
   },
   {
-    "order": 742,
+    "order": 739,
     "title": "風箏",
     "artist": "風箏",
     "latestStreamDate": "2026-07-16",
@@ -8904,7 +8868,7 @@
     "note": ""
   },
   {
-    "order": 743,
+    "order": 740,
     "title": "當你孤單你會想起誰（feat. そまる）",
     "artist": "張棟樑",
     "latestStreamDate": "2026-07-27",
@@ -8916,7 +8880,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 744,
+    "order": 741,
     "title": "城裡的月光（feat. そまる）",
     "artist": "許美靜",
     "latestStreamDate": "2026-07-27",
@@ -8928,7 +8892,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 745,
+    "order": 742,
     "title": "ねえねえねえ。（feat. そまる）",
     "artist": "鏡音リン、初音ミク",
     "latestStreamDate": "2026-07-27",
@@ -8940,7 +8904,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 746,
+    "order": 743,
     "title": "チューリングラブ（feat. そまる）",
     "artist": "ナナヲアカリ feat. Sou",
     "latestStreamDate": "2026-07-27",
@@ -8952,7 +8916,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 747,
+    "order": 744,
     "title": "ぎゅっと。（feat. そまる）",
     "artist": "もさを。",
     "latestStreamDate": "2026-07-27",
@@ -8964,7 +8928,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 748,
+    "order": 745,
     "title": "もう恋なんてしない（feat. そまる）",
     "artist": "槇原敬之",
     "latestStreamDate": "2026-07-27",
@@ -8976,7 +8940,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 749,
+    "order": 746,
     "title": "我只在乎你（feat. そまる）",
     "artist": "鄧麗君",
     "latestStreamDate": "2026-07-27",
@@ -8988,7 +8952,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 750,
+    "order": 747,
     "title": "夢醒時分（feat. そまる）",
     "artist": "陳淑樺",
     "latestStreamDate": "2026-07-27",
@@ -9000,7 +8964,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 751,
+    "order": 748,
     "title": "新不了情（feat. そまる）",
     "artist": "萬芳",
     "latestStreamDate": "2026-07-27",
@@ -9012,7 +8976,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 752,
+    "order": 749,
     "title": "屋頂（feat. そまる）",
     "artist": "溫嵐、周杰倫",
     "latestStreamDate": "2026-07-27",
@@ -9024,7 +8988,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 753,
+    "order": 750,
     "title": "小酒窩（feat. そまる）",
     "artist": "林俊傑、蔡卓妍",
     "latestStreamDate": "2026-07-27",
@@ -9036,7 +9000,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 754,
+    "order": 751,
     "title": "她說（feat. そまる）",
     "artist": "林俊傑",
     "latestStreamDate": "2026-07-27",
@@ -9048,7 +9012,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 755,
+    "order": 752,
     "title": "外婆的澎湖灣（feat. そまる）",
     "artist": "潘安邦",
     "latestStreamDate": "2026-07-27",
@@ -9060,7 +9024,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 756,
+    "order": 753,
     "title": "梁山伯與茱麗葉（feat. そまる）",
     "artist": "卓文萱、曹格",
     "latestStreamDate": "2026-07-27",
@@ -9072,7 +9036,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 757,
+    "order": 754,
     "title": "追光者（feat. そまる）",
     "artist": "岑寧兒",
     "latestStreamDate": "2026-07-27",
@@ -9084,7 +9048,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 758,
+    "order": 755,
     "title": "雨愛（feat. そまる）",
     "artist": "楊丞琳",
     "latestStreamDate": "2026-07-27",
@@ -9096,7 +9060,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 759,
+    "order": 756,
     "title": "不該（feat. そまる）",
     "artist": "張惠妹、周杰倫",
     "latestStreamDate": "2026-07-27",
@@ -9108,7 +9072,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 760,
+    "order": 757,
     "title": "珊瑚海（feat. そまる）",
     "artist": "周杰倫、梁心頤",
     "latestStreamDate": "2026-07-27",
@@ -9120,7 +9084,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 761,
+    "order": 758,
     "title": "你是我的眼（feat. そまる）",
     "artist": "蕭煌奇",
     "latestStreamDate": "2026-07-27",
@@ -9132,7 +9096,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 762,
+    "order": 759,
     "title": "挪威的森林（feat. そまる）",
     "artist": "伍佰",
     "latestStreamDate": "2026-07-27",
@@ -9144,7 +9108,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 763,
+    "order": 760,
     "title": "稻香（feat. そまる）",
     "artist": "周杰倫",
     "latestStreamDate": "2026-07-27",
@@ -9156,7 +9120,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 764,
+    "order": 761,
     "title": "告白氣球（feat. そまる）",
     "artist": "周杰倫",
     "latestStreamDate": "2026-07-27",
@@ -9168,7 +9132,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 765,
+    "order": 762,
     "title": "愛你（feat. そまる）",
     "artist": "陳芳語",
     "latestStreamDate": "2026-07-27",
@@ -9180,7 +9144,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 766,
+    "order": 763,
     "title": "離開地球表面（feat. そまる）",
     "artist": "五月天",
     "latestStreamDate": "2026-07-27",
@@ -9192,7 +9156,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 767,
+    "order": 764,
     "title": "ロメオ（feat. そまる）",
     "artist": "LIP×LIP、初音ミク・GUMI",
     "latestStreamDate": "2026-07-27",
@@ -9204,7 +9168,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 768,
+    "order": 765,
     "title": "朋友（feat. そまる）",
     "artist": "周華健",
     "latestStreamDate": "2026-07-27",
@@ -9216,7 +9180,7 @@
     "note": "#連動歌回"
   },
   {
-    "order": 769,
+    "order": 766,
     "title": "星座になれたら（Acoustic Ver.）",
     "artist": "結束バンド",
     "latestStreamDate": "2026-08-10",
@@ -9228,7 +9192,7 @@
     "note": ""
   },
   {
-    "order": 770,
+    "order": 767,
     "title": "夏色えがおで1,2,Jump!",
     "artist": "μ's",
     "latestStreamDate": "2026-08-10",
@@ -9240,7 +9204,7 @@
     "note": ""
   },
   {
-    "order": 771,
+    "order": 768,
     "title": "Birth of Love",
     "artist": "錢欣郁",
     "latestStreamDate": "2026-08-10",
@@ -9252,7 +9216,7 @@
     "note": "#珍珠美人魚"
   },
   {
-    "order": 772,
+    "order": 769,
     "title": "なないろ☆ナミダ",
     "artist": "Tomato n' Pine",
     "latestStreamDate": "2026-09-02",
@@ -9264,7 +9228,7 @@
     "note": "#べるぜバブ"
   },
   {
-    "order": 773,
+    "order": 770,
     "title": "フリイジア",
     "artist": "雨宮天",
     "latestStreamDate": "2026-09-02",
@@ -9276,7 +9240,7 @@
     "note": "#天官賜福"
   },
   {
-    "order": 774,
+    "order": 771,
     "title": "Blessing",
     "artist": "初音ミク、鏡音リン、鏡音レン、巡音流歌、MEIKO、KAITO",
     "latestStreamDate": "2026-09-02",
